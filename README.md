@@ -17,11 +17,11 @@ you can make, and [CONTRIBUTING.md](CONTRIBUTING.md) says how.
 
 | Skill | What it does |
 |---|---|
-| [`ux-research-brief`](skills/ux-research-brief/) | Scopes a research project through intake, definition and method selection, choosing from a library of 20 methods, then hands execution to the others. |
-| [`discussion-guide`](skills/discussion-guide/) | Drafts an interview script. Pairs every attitude question with a follow-up that can contradict it. |
-| [`usability-test-plan`](skills/usability-test-plan/) | Plans a moderated or unmoderated test, sizes the sample, and reports every stated rating next to the observed record. |
-| [`survey-questions-v2`](skills/survey-questions-v2/) | Drafts a survey, or audits an existing one for bias and for coverage against a brief. |
-| [`desk-research`](skills/desk-research/) | Competitor and landscape research, weighted by what each source type can and cannot show. Returns hypotheses, not findings about users. |
+| [`ux-research-brief`](plugins/ux-research/skills/ux-research-brief/) | Scopes a research project through intake, definition and method selection, choosing from a library of 20 methods, then hands execution to the others. |
+| [`discussion-guide`](plugins/ux-research/skills/discussion-guide/) | Drafts an interview script. Pairs every attitude question with a follow-up that can contradict it. |
+| [`usability-test-plan`](plugins/ux-research/skills/usability-test-plan/) | Plans a moderated or unmoderated test, sizes the sample, and reports every stated rating next to the observed record. |
+| [`survey-questions`](plugins/ux-research/skills/survey-questions/) | Drafts a survey, or audits an existing one for bias and for coverage against a brief. |
+| [`desk-research`](plugins/ux-research/skills/desk-research/) | Competitor and landscape research, weighted by what each source type can and cannot show. Returns hypotheses, not findings about users. |
 
 `ux-research-brief` can orchestrate the other four, or you can run any of them on its own.
 

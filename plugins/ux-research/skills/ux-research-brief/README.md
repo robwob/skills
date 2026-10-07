@@ -3,7 +3,7 @@
 Plans UX research. Takes a vague research need to an approved plan and a justified set of methods, chosen from a library of 20 rather than from memory, then hands each method to the skill that can run it. Produces a Word brief, an HTML report with a method landscape chart, or both, as you choose at the start.
 
 Part of the research family, with `ux-research-brief`, `discussion-guide`, `usability-test-plan`,
-`survey-questions-v2` and `desk-research`. Each works on its own.
+`survey-questions` and `desk-research`. Each works on its own.
 
 ## Install
 

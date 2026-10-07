@@ -3,7 +3,7 @@
 Conducts desk research and competitor analysis and synthesises it by theme. Selects two to four competitors, searches against inclusion rules written first, weighs each source by what that type can and cannot show, and returns hypotheses to test, not findings about users.
 
 Part of the research family, with `ux-research-brief`, `discussion-guide`, `usability-test-plan`,
-`survey-questions-v2` and `desk-research`. Each works on its own.
+`survey-questions` and `desk-research`. Each works on its own.
 
 ## Install
 

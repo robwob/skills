@@ -3,7 +3,7 @@
 Drafts a usability test plan: objectives, methodology, task scenarios, moderator guide, analysis plan and an observer template. Asks whether the test is moderated or unmoderated, sizes the sample, and reports every stated rating next to the observed record.
 
 Part of the research family, with `ux-research-brief`, `discussion-guide`, `usability-test-plan`,
-`survey-questions-v2` and `desk-research`. Each works on its own.
+`survey-questions` and `desk-research`. Each works on its own.
 
 ## Install
 

@@ -3,7 +3,7 @@
 Drafts a discussion guide for user interviews. Every question that asks what someone thinks is paired with a specific question about a real occasion that could contradict it.
 
 Part of the research family, with `ux-research-brief`, `discussion-guide`, `usability-test-plan`,
-`survey-questions-v2` and `desk-research`. Each works on its own.
+`survey-questions` and `desk-research`. Each works on its own.
 
 ## Install
 

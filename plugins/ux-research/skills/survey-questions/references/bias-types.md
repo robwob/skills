@@ -1,6 +1,6 @@
 # Survey bias and question design
 
-The library `survey-questions-v2` reads from, in all three of its modes: drafting from a brief,
+The library `survey-questions` reads from, in all three of its modes: drafting from a brief,
 evaluating an existing survey for bias, and evaluating one against a brief.
 
 **Last updated:** 7 October 2026
@@ -138,8 +138,8 @@ One item asks about two things, so the answer cannot be attributed to either.
 
 Asks how often someone does something without first confirming they do it ("How often do you use
 this feature?"). Forces a false answer from everyone who does not. **Mitigation:** a filter
-question first, and routing around the follow-up. `(convention)` Carried over from the previous
-version of `survey-questions-v2`, where it was an unsourced check; kept because it is a real and
+question first, and routing around the follow-up. `(convention)` Carried over from an earlier
+version of this skill, where it was an unsourced check; kept because it is a real and
 common failure, tagged for what it is.
 
 #### False dichotomy

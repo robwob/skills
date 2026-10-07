@@ -1,5 +1,5 @@
 ---
-name: survey-questions-v2
+name: survey-questions
 description: >
   Use this skill to draft a new survey from a research brief, evaluate an existing survey for
   biased questions, or evaluate an existing survey against a research brief. Triggers: 'survey',
@@ -361,8 +361,8 @@ read-only), say so plainly rather than reporting a save that did not happen. Out
 markdown to paste into `references/bias-types.md`, and note the skill needs repackaging:
 
 ```
-cd <the survey-questions-v2 directory>
-zip -qr ../survey-questions-v2.skill SKILL.md README.md references/
+cd <the survey-questions directory>
+zip -qr ../survey-questions.skill SKILL.md README.md references/
 ```
 
 ---

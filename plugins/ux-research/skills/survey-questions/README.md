@@ -1,26 +1,26 @@
-# survey-questions-v2
+# survey-questions
 
 Drafts a survey from a brief, checks an existing survey for bias, or checks a survey against a brief for both coverage and bias. It also says what the survey cannot establish.
 
 Part of the research family, with `ux-research-brief`, `discussion-guide`, `usability-test-plan`,
-`survey-questions-v2` and `desk-research`. Each works on its own.
+`survey-questions` and `desk-research`. Each works on its own.
 
 ## Install
 
 **Claude Code / local.** Put this directory anywhere and symlink it into your skills folder:
 
 ```
-ln -s /path/to/survey-questions-v2 ~/.claude/skills/survey-questions-v2
+ln -s /path/to/survey-questions ~/.claude/skills/survey-questions
 ```
 
 Skills are picked up when a session starts, so start a new session afterwards. **A broken symlink
 fails silently**: the skill just does not appear, with no error. Confirm it loaded:
 
 ```
-[ -e ~/.claude/skills/survey-questions-v2/SKILL.md ] && echo OK || echo BROKEN
+[ -e ~/.claude/skills/survey-questions/SKILL.md ] && echo OK || echo BROKEN
 ```
 
-**claude.ai.** Upload `survey-questions-v2.skill`. Uploaded copies are read-only, so the skill cannot save an
+**claude.ai.** Upload `survey-questions.skill`. Uploaded copies are read-only, so the skill cannot save an
 approved addition to its library. It will say so and hand you the text to paste in.
 
 ## Use
@@ -62,5 +62,5 @@ lacks, it proposes an addition and waits: nothing is written without your approv
 After editing anything here, rebuild the zip:
 
 ```
-cd survey-questions-v2 && zip -qr ../survey-questions-v2.skill SKILL.md README.md references/
+cd survey-questions && zip -qr ../survey-questions.skill SKILL.md README.md references/
 ```

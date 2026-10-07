@@ -700,12 +700,12 @@ tracked over time, and the relative size of things you already know qualitativel
 usual error is reading a stated intention as a forecast. It can only measure what the questions
 asked, so it confirms and sizes existing hypotheses rather than finding new ones, and every
 answer is subject to the bias taxonomy in
-`survey-questions-v2/references/bias-types.md`. `(derived)`
+`survey-questions/references/bias-types.md`. `(derived)`
 
 **Needs:** A hypothesis worth sizing, enough respondents, and a distribution route. Should
 normally follow qualitative work rather than precede it. `(NN/g, stated)` on complementarity.
 
-**Executed by:** `survey-questions-v2`
+**Executed by:** `survey-questions`
 
 ### Customer Feedback
 
