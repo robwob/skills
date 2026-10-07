@@ -1,0 +1,25 @@
+{
+  "name": "newport",
+  "owner": {
+    "name": "Rob Newport"
+  },
+  "description": "UX research skills for Claude, each backed by a cited reference library.",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "ux-research",
+      "source": "./plugins/ux-research",
+      "description": "Five UX research skills: scope a brief, write a discussion guide, plan a usability test, draft or audit a survey, and run desk research.",
+      "version": "1.0.0",
+      "displayName": "UX Research",
+      "category": "Research",
+      "tags": [
+        "ux",
+        "research",
+        "user-research",
+        "surveys",
+        "usability"
+      ]
+    }
+  ]
+}

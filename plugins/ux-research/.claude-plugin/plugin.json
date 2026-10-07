@@ -1,0 +1,10 @@
+{
+  "name": "ux-research",
+  "description": "Five UX research skills: scope a brief, write a discussion guide, plan a usability test, draft or audit a survey, and run desk research. Each selects from a cited reference library rather than from memory.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Rob Newport"
+  },
+  "license": "MIT",
+  "keywords": ["ux", "research", "user-research", "surveys", "usability", "desk-research"]
+}
