@@ -1,0 +1,17 @@
+{
+  "name": "project-brief",
+  "description": "Defines why a project is being done before any design or code, then derives the plan from that: which design and build stages it actually needs, in what order, with review gates.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Robwob"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/robwob/skills",
+  "keywords": [
+    "brief",
+    "planning",
+    "design-process",
+    "scoping",
+    "product"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "design-strategy",
+  "description": "Two design strategy skills: analyse which strategic themes a page uses to solve its problem, then narrow those to the levers you can dial, the psychology principles that explain why moving each one works, and the methods that move it.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Robwob"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/robwob/skills",
+  "keywords": [
+    "design",
+    "design-strategy",
+    "ux",
+    "psychology",
+    "behavioural-design",
+    "conversion"
+  ]
+}

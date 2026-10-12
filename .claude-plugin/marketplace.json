@@ -1,0 +1,70 @@
+{
+  "name": "design",
+  "owner": {
+    "name": "Robwob"
+  },
+  "description": "Design and UX research skills for Claude, each backed by a cited reference library.",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "ux-research",
+      "source": "./plugins/ux-research",
+      "description": "Five UX research skills: scope a brief, write a discussion guide, plan a usability test, draft or audit a survey, and run desk research.",
+      "version": "1.0.0",
+      "displayName": "UX Research",
+      "category": "Research",
+      "tags": [
+        "ux",
+        "research",
+        "user-research",
+        "surveys",
+        "usability"
+      ]
+    },
+    {
+      "name": "design-review",
+      "source": "./plugins/design-review",
+      "description": "Four review skills: a flow for usability, a screen for visual craft, its copy for clarity, or all three at once with the duplicates removed.",
+      "version": "1.0.0",
+      "displayName": "Design Review",
+      "category": "Design",
+      "tags": [
+        "design",
+        "ux",
+        "ui",
+        "accessibility",
+        "content-design",
+        "wcag"
+      ]
+    },
+    {
+      "name": "design-strategy",
+      "source": "./plugins/design-strategy",
+      "description": "Two strategy skills: analyse which themes a page uses to solve its problem, then narrow them to the levers you can dial and the psychology behind each.",
+      "version": "1.0.0",
+      "displayName": "Design Strategy",
+      "category": "Design",
+      "tags": [
+        "design",
+        "strategy",
+        "psychology",
+        "behavioural-design",
+        "conversion"
+      ]
+    },
+    {
+      "name": "project-brief",
+      "source": "./plugins/project-brief",
+      "description": "Defines why a project is being done before any design or code, then derives the stage plan from that.",
+      "version": "1.0.0",
+      "displayName": "Project Brief",
+      "category": "Process",
+      "tags": [
+        "brief",
+        "planning",
+        "scoping",
+        "design-process"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "design-review",
+  "description": "Four design review skills: review a flow for usability, a screen for visual craft, its copy for clarity, or all three at once with the duplicates removed. Each finding is measured and tiered against a cited bar rather than asserted from taste.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Robwob"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/robwob/skills",
+  "keywords": [
+    "design",
+    "design-review",
+    "ux",
+    "ui",
+    "accessibility",
+    "content-design",
+    "heuristic-evaluation",
+    "wcag"
+  ]
+}
