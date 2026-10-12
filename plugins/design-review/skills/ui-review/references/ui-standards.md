@@ -17,7 +17,7 @@ Every entry carries a tier. The tier decides the severity of a finding.
 | **Standard** | A published, citable requirement, in practice a WCAG success criterion. Objectively measurable. | A defect. Not negotiable by taste. |
 | **Evidence** | A quantified finding from a primary research source. | A strong finding. Overriding it needs a stated reason. |
 | **Convention** | Widely adopted practice where established systems disagree with each other. | A deviation. Fine if deliberate and consistent, a finding if accidental. |
-| **House** | The owner's own evidenced preferences, from a house file they nominate. Applies only to their work. | A defect in their work, irrelevant in anyone else's. |
+| **House** | The owner's own evidenced preferences, from `~/.claude/house.md`. Applies only to their work. | A defect in their work, irrelevant in anyone else's. |
 
 Folklore is excluded. Several things every designer "knows" are in **Excluded, and why** at the end,
 because they have no source and should not be re-added.
@@ -38,8 +38,9 @@ it has not been measured, but the warning is a prompt, not a substitute for doin
 
 ## The House tier
 
-For the owner's own work, read the house file they nominate: a document of their evidenced visual
-preferences, built up from repeated observations rather than written in one sitting.
+For the owner's own work, read `~/.claude/house.md`: a document of their evidenced visual
+preferences, built up from repeated observations rather than written in one sitting. It may point
+elsewhere for the detail, in which case follow it.
 
 **Do not copy those rules into this file.** The house file is the single copy and it changes as
 observations accumulate. Read it at review time.
@@ -266,5 +267,5 @@ Kept so they are not re-added.
 
 W3C WAI (WCAG 2.1 and 2.2 Understanding documents), Nielsen Norman Group Gestalt series, Baymard
 Institute, Apple Human Interface Guidelines, Material Design 2 and 3, Adrian Roselli on WCAG 3
-contrast status, and the owner's nominated house file for the House tier. Individual URLs sit with
+contrast status, and `~/.claude/house.md` for the House tier. Individual URLs sit with
 each entry above.

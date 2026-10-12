@@ -53,8 +53,9 @@ references/measure.js         computes the numeric checks against a rendered pag
 
 Every entry carries a tier. **Standard** is a citable requirement and a violation is a defect.
 **Evidence** is a quantified primary-source finding. **Convention** is adopted practice where systems
-disagree. **House** is the owner's own evidenced preferences, read from a file they nominate at
-review time rather than copied here, and applied only to their own work.
+disagree. **House** is the owner's own evidenced preferences, read from `~/.claude/house.md` at
+review time rather than copied here, and applied only to their own work. With no such file the tier
+does not apply.
 
 Folklore is excluded and stays excluded: the golden ratio, 60-30-10, a WCAG-backed minimum font size
 and APCA thresholds are all listed in `Excluded, and why` with the reason.

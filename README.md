@@ -27,7 +27,8 @@ Checks a design against a bar. Every finding carries a severity and the measured
 Entries in the review libraries are tiered. **Standard** is a citable requirement and a violation
 is a defect. **Evidence** is a quantified primary-source finding. **Convention** is adopted practice
 where established systems disagree. **House** is your own evidenced preferences, read at review time
-from a file you nominate, and applied only to your own work, never to a competitor's.
+from `~/.claude/house.md`, and applied only to your own work, never to a competitor's. With no such
+file the House tier does not apply and the other three still do.
 
 Folklore is excluded and stays excluded. The golden ratio, 60-30-10, a WCAG-backed minimum font
 size and APCA thresholds are each listed in `Excluded, and why` with the reason.
@@ -51,8 +52,9 @@ yourself.
 |---|---|
 | [`brief`](plugins/project-brief/skills/brief/) | Defines why a project is being done before any design or code, then derives the plan from that: which stages it needs, in what order, with review gates. |
 
-`brief` reads `references/house-rules.md` for the one workspace-specific thing it needs. That file
-ships as a template with every section documented. Replace it with your own, or leave a section
+`brief` needs one workspace-specific thing: where shared components live, which stages you run, your
+writing conventions. It reads `~/.claude/house.md` when that exists, and falls back to the
+`references/house-rules.md` template, which ships with every section documented. Leave a section
 empty and the skill uses its stated default and tells you it did.
 
 ## UX research

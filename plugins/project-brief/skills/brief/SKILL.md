@@ -33,7 +33,9 @@ does not open Paper.
 
 ## Before starting
 
-Read `references/sections.md`, `references/stages.md` and `references/house-rules.md` in full. Do
+Read `references/sections.md`, `references/stages.md` and the house rules in full. For the house
+rules, prefer `~/.claude/house.md` when it exists and treat `references/house-rules.md` as the
+documented fallback and template. Do
 not work from memory. The acceptance tests in the sections file are the whole value of the skill and
 they are not guessable.
 

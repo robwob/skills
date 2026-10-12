@@ -80,9 +80,10 @@ silently as if it had been checked.
 
 Establish this before writing findings, because it decides which tiers apply.
 
-- **The owner's own work**: if they keep a house file of evidenced visual preferences, read it and
-  apply the **House** tier alongside Standard, Evidence and Convention. Ask for the path the first
-  time. There is no default location.
+- **The owner's own work**: read `~/.claude/house.md` if it exists and apply the **House** tier
+  alongside Standard, Evidence and Convention. That file may point somewhere else for the detail, in
+  which case follow it. If it does not exist, ask whether there is a house file and where; if there
+  is none, the House tier simply does not apply.
 - **Anyone else's work**: Standard, Evidence and Convention only. House rules are one team's taste and
   are not a defect in someone else's design.
 

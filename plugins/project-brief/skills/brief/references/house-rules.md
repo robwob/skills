@@ -1,10 +1,13 @@
 # House rules
 
 **This is the only file in the skill tied to a particular person or workspace. Everything else is
-generic. What follows is a template: replace each section with your own and the rest of the skill
-works unchanged. Leave a section empty and the skill uses the stated default instead of guessing.**
+generic. What follows is a template.**
 
-The skill reads this file before writing anything.
+The skill prefers `~/.claude/house.md` when that exists, so the recommended approach is to write
+your rules there and leave this file alone. A file outside the repo does not need re-editing every
+time you pull, and it cannot be committed by accident. Failing that, replace the sections here with
+your own; the rest of the skill works unchanged either way. Leave a section empty and the skill uses
+the stated default instead of guessing.
 
 ---
 

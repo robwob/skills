@@ -69,7 +69,7 @@ them once here is most of the value of running the coordinator.
    without it.
 3. **The reader and moment.** Who is reading, and at what point. `content-review` needs it.
 4. **Whose bar.** The owner's own work, where `ui-review` applies the House tier from their
-   nominated house file and any project design system, or someone else's, where it does not.
+   `~/.claude/house.md` and any project design system, or someone else's, where it does not.
 
 Then confirm the lenses:
 
