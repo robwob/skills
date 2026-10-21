@@ -1,0 +1,241 @@
+participant_id,card,category,order
+P01,Renew a book,Borrowing,3
+P01,Reserve a book,Borrowing,4
+P01,Borrow an e-book,Borrowing,1
+P01,Return a book,Borrowing,2
+P01,Children's story time,events & learning,5
+P01,Computer skills class,events & learning,2
+P01,Author talk,events & learning,4
+P01,Homework club,events & learning,1
+P01,Book a study room,events & learning,3
+P01,Print and copy,Library services,1
+P01,Join the library,Library services,3
+P01,Opening hours,Library services,2
+P02,Renew a book,borrowing,2
+P02,Reserve a book,borrowing,3
+P02,Borrow an e-book,borrowing,5
+P02,Return a book,borrowing,4
+P02,Children's story time,Learning,5
+P02,Computer skills class,Learning,4
+P02,Author talk,Learning,3
+P02,Homework club,Learning,2
+P02,Book a study room,Learning,1
+P02,Print and copy,Using the library,2
+P02,Join the library,borrowing,1
+P02,Opening hours,Using the library,1
+P03,Renew a book,Loans,1
+P03,Reserve a book,Loans,4
+P03,Borrow an e-book,Loans,2
+P03,Return a book,Loans,5
+P03,Children's story time,Events & learning,4
+P03,Computer skills class,Events & learning,2
+P03,Author talk,Loans,3
+P03,Homework club,Events & learning,3
+P03,Book a study room,Events & learning,1
+P03,Print and copy,Using the library,2
+P03,Join the library,Using the library,3
+P03,Opening hours,Using the library,1
+P04,Renew a book,Using the library,4
+P04,Reserve a book,BORROWING,3
+P04,Borrow an e-book,BORROWING,2
+P04,Return a book,BORROWING,1
+P04,Children's story time,Events,3
+P04,Computer skills class,Events,5
+P04,Author talk,Events,4
+P04,Homework club,Events,2
+P04,Book a study room,Events,1
+P04,Print and copy,Using the library,3
+P04,Join the library,Using the library,2
+P04,Opening hours,Using the library,1
+P05,Renew a book, Borrowing ,6
+P05,Reserve a book, Borrowing ,5
+P05,Borrow an e-book, Borrowing ,4
+P05,Return a book, Borrowing ,3
+P05,Children's story time,Kids and families,2
+P05,Computer skills class,Adults,1
+P05,Author talk,Adults,2
+P05,Homework club,Kids and families,1
+P05,Book a study room, Borrowing ,2
+P05,Print and copy,Help and info,2
+P05,Join the library, Borrowing ,1
+P05,Opening hours,Help and info,1
+P06,Renew a book,Using the library,2
+P06,Reserve a book,Using the library,5
+P06,Borrow an e-book,BORROWING,1
+P06,Return a book,BORROWING,2
+P06,Children's story time,Events,4
+P06,Computer skills class,Events,2
+P06,Author talk,Events,3
+P06,Homework club,Events,1
+P06,Book a study room,Using the library,4
+P06,Print and copy,Using the library,1
+P06,Join the library,BORROWING,3
+P06,Opening hours,Using the library,3
+P07,Renew a book,Borrowing,1
+P07,Reserve a book,Borrowing,2
+P07,Borrow an e-book,Borrowing,4
+P07,Return a book,Borrowing,3
+P07,Children's story time,Classes and events,3
+P07,Computer skills class,Classes and events,1
+P07,Author talk,Classes and events,2
+P07,Homework club,Classes and events,5
+P07,Book a study room,Classes and events,4
+P07,Print and copy,Using the library,1
+P07,Join the library,Using the library,3
+P07,Opening hours,Using the library,2
+P08,Renew a book,Borrowing,4
+P08,Reserve a book,Borrowing,3
+P08,Borrow an e-book,Borrowing,1
+P08,Return a book,Borrowing,2
+P08,Children's story time,Events & learning,1
+P08,Computer skills class,Events & learning,4
+P08,Author talk,Events & learning,2
+P08,Homework club,Events & learning,3
+P08,Book a study room,Practical info,4
+P08,Print and copy,Practical info,2
+P08,Join the library,Practical info,3
+P08,Opening hours,Practical info,1
+P09,Renew a book,Loans,1
+P09,Reserve a book,Joining and visiting,1
+P09,Borrow an e-book,E-books and returns,1
+P09,Return a book,E-books and returns,4
+P09,Children's story time,events & learning,3
+P09,Computer skills class,E-books and returns,5
+P09,Author talk,events & learning,1
+P09,Homework club,events & learning,2
+P09,Book a study room,E-books and returns,3
+P09,Print and copy,Spaces and equipment,1
+P09,Join the library,E-books and returns,2
+P09,Opening hours,Joining and visiting,2
+P10,Renew a book,Borrow & return,2
+P10,Reserve a book,Using the library,1
+P10,Borrow an e-book,Using the library,6
+P10,Return a book,Borrow & return,3
+P10,Children's story time,Borrow & return,1
+P10,Computer skills class,Events,1
+P10,Author talk,Events,2
+P10,Homework club,Events,3
+P10,Book a study room,Using the library,4
+P10,Print and copy,Using the library,3
+P10,Join the library,Using the library,5
+P10,Opening hours,Using the library,2
+P11,Renew a book,Borrow & return,1
+P11,Reserve a book,Borrow & return,4
+P11,Borrow an e-book,Borrow & return,3
+P11,Return a book,Borrow & return,2
+P11,Children's story time,What's on,2
+P11,Computer skills class,What's on,4
+P11,Author talk,What's on,1
+P11,Homework club,What's on,3
+P11,Book a study room,What's on,5
+P11,Print and copy,using the library,1
+P11,Join the library,using the library,3
+P11,Opening hours,using the library,2
+P12,Renew a book,Borrowing,4
+P12,Reserve a book,Borrowing,5
+P12,Borrow an e-book,Borrowing,2
+P12,Return a book,Borrowing,1
+P12,Children's story time,Kids and families,1
+P12,Computer skills class,Adults,1
+P12,Author talk,Adults,2
+P12,Homework club,Kids and families,2
+P12,Book a study room,Borrowing,3
+P12,Print and copy,Library services,2
+P12,Join the library,Library services,1
+P12,Opening hours,Library services,3
+P13,Renew a book,Books and loans,2
+P13,Reserve a book,Books and loans,5
+P13,Borrow an e-book,Books and loans,3
+P13,Return a book,Books and loans,1
+P13,Children's story time,Events & learning,4
+P13,Computer skills class,Events & learning,1
+P13,Author talk,Events & learning,2
+P13,Homework club,Events & learning,3
+P13,Book a study room,Books and loans,4
+P13,Print and copy,Using the library,2
+P13,Join the library,Using the library,1
+P13,Opening hours,Using the library,3
+P14,Renew a book,Borrowing,3
+P14,Reserve a book,Borrowing,6
+P14,Borrow an e-book,Borrowing,5
+P14,Return a book,Borrowing,2
+P14,Children's story time,Classes and events,3
+P14,Computer skills class,Classes and events,4
+P14,Author talk,Classes and events,2
+P14,Homework club,Classes and events,1
+P14,Book a study room,Borrowing,4
+P14,Print and copy,using the library,1
+P14,Join the library,Borrowing,1
+P14,Opening hours,using the library,2
+P15,Renew a book,Loans,3
+P15,Reserve a book,Loans,1
+P15,Borrow an e-book,Loans,4
+P15,Return a book,Loans,2
+P15,Children's story time,Learning,1
+P15,Computer skills class,Learning,3
+P15,Author talk,Learning,4
+P15,Homework club,Learning,2
+P15,Book a study room,using the library,2
+P15,Print and copy,using the library,1
+P15,Join the library,using the library,3
+P15,Opening hours,using the library,4
+P16,Renew a book,Books and loans,2
+P16,Reserve a book,Books and loans,4
+P16,Borrow an e-book,Books and loans,3
+P16,Return a book,Books and loans,1
+P16,Children's story time,Events & learning,6
+P16,Computer skills class,Events & learning,5
+P16,Author talk,Events & learning,3
+P16,Homework club,Events & learning,1
+P16,Book a study room,Events & learning,4
+P16,Print and copy,Help and info,2
+P16,Join the library,Help and info,1
+P16,Opening hours,Events & learning,2
+P17,Renew a book, Borrowing ,3
+P17,Reserve a book, Borrowing ,1
+P17,Borrow an e-book, Borrowing ,2
+P17,Return a book, Borrowing ,5
+P17,Children's story time,events & learning,2
+P17,Computer skills class, Borrowing ,4
+P17,Author talk,events & learning,3
+P17,Homework club,events & learning,1
+P17,Book a study room,events & learning,4
+P17,Print and copy,Help and info,1
+P17,Join the library, Borrowing ,6
+P17,Opening hours,Help and info,2
+P18,Renew a book, Borrowing ,4
+P18,Reserve a book, Borrowing ,1
+P18,Borrow an e-book, Borrowing ,2
+P18,Return a book, Borrowing ,3
+P18,Children's story time,Classes and events,4
+P18,Computer skills class,Classes and events,1
+P18,Author talk,Classes and events,3
+P18,Homework club,Classes and events,2
+P18,Book a study room,using the library,2
+P18,Print and copy,using the library,3
+P18,Join the library,using the library,4
+P18,Opening hours,using the library,1
+P19,Renew a book,Stuff,10
+P19,Reserve a book,Stuff,3
+P19,Borrow an e-book,Stuff,11
+P19,Return a book,Stuff,12
+P19,Children's story time,Stuff,6
+P19,Computer skills class,Stuff,2
+P19,Author talk,Stuff,4
+P19,Homework club,Stuff,7
+P19,Book a study room,Stuff,5
+P19,Print and copy,Stuff,9
+P19,Join the library,Stuff,1
+P19,Opening hours,Stuff,8
+P20,Renew a book,Borrow & return,3
+P20,Reserve a book,Borrow & return,4
+P20,Borrow an e-book,Borrow & return,1
+P20,Return a book,Borrow & return,5
+P20,Children's story time,events & learning,2
+P20,Computer skills class,events & learning,3
+P20,Author talk,,
+P20,Homework club,using the library,2
+P20,Book a study room,events & learning,1
+P20,Print and copy,Borrow & return,2
+P20,Join the library,using the library,1
+P20,Opening hours,,

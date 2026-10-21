@@ -1,0 +1,31 @@
+participant_id,card,category,order
+P1,Renew a book,Borrowing,1
+P1,Reserve a book,Borrowing,2
+P1,Borrow an e-book,Borrowing,3
+P1,Computer skills class,Events,1
+P1,Author talk,Events,2
+P1,Opening hours,Info,1
+P2,Renew a book,Loans,1
+P2,Reserve a book,Loans,2
+P2,Borrow an e-book,Digital,1
+P2,Computer skills class,Digital,2
+P2,Author talk,Events,1
+P2,Opening hours,Info,1
+P3,Renew a book,Books,1
+P3,Reserve a book,Books,2
+P3,Borrow an e-book,Books,3
+P3,Computer skills class,What's on,1
+P3,Author talk,What's on,2
+P3,Opening hours,What's on,3
+P4,Renew a book,Borrowing,1
+P4,Reserve a book,Borrowing,2
+P4,Borrow an e-book,Borrowing,3
+P4,Computer skills class,Learning,1
+P4,Author talk,What's on,1
+P4,Opening hours,What's on,2
+P5,Renew a book,Library services,1
+P5,Reserve a book,Library services,2
+P5,Borrow an e-book,Library services,3
+P5,Opening hours,Library services,4
+P5,Computer skills class,Events and classes,1
+P5,Author talk,Events and classes,2

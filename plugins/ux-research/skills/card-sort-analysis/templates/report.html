@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f6f7f9;
+  --fg: #1c2024;
+  --muted: #5b636d;
+  --line: #d6dae0;
+  --accent: #1f4fa3;
+  --chip-bg: #ffffff;
+  --warn-bg: #fff6e0;
+  --warn-line: #c98a00;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14171a;
+    --surface: #1d2126;
+    --fg: #e8eaed;
+    --muted: #a0a8b2;
+    --line: #353b43;
+    --accent: #8db4ff;
+    --chip-bg: #14171a;
+    --warn-bg: #2b2412;
+    --warn-line: #d9a21b;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14171a;
+  --surface: #1d2126;
+  --fg: #e8eaed;
+  --muted: #a0a8b2;
+  --line: #353b43;
+  --accent: #8db4ff;
+  --chip-bg: #14171a;
+  --warn-bg: #2b2412;
+  --warn-line: #d9a21b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 56rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
+h1 { font-size: 1.7rem; line-height: 1.2; margin: 0 0 .5rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .75rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+h3 { font-size: 1.05rem; margin: 1.5rem 0 .5rem; }
+p { margin: .5rem 0; }
+.meta { color: var(--muted); margin: 0 0 1rem; }
+.layer-label {
+  display: inline-block; font-size: .8rem; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--muted); margin: 2rem 0 0;
+}
+.summary p { font-size: 1.1rem; }
+.chip {
+  display: inline-block; font-size: .78rem; line-height: 1;
+  padding: .25rem .5rem; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--chip-bg); color: var(--fg); margin-right: .35rem; white-space: nowrap;
+}
+.chip.lowconf { border-style: dashed; border-color: var(--warn-line); }
+.card {
+  border: 1px solid var(--line); background: var(--surface);
+  border-radius: 8px; padding: .9rem 1rem; margin: .75rem 0;
+}
+.card h3 { margin: 0 0 .35rem; }
+.card .chips { margin-top: .5rem; }
+.draft-note { color: var(--muted); font-size: .95rem; }
+.cards-list { margin: .25rem 0 0; padding-left: 1.2rem; }
+.notice {
+  border-left: 4px solid var(--warn-line); background: var(--warn-bg);
+  padding: .6rem .9rem; margin: .75rem 0; border-radius: 0 6px 6px 0;
+}
+.tablewrap { overflow-x: auto; margin: .5rem 0 1rem; }
+table { border-collapse: collapse; font-size: .92rem; min-width: 100%; }
+caption { text-align: left; color: var(--muted); padding: .25rem 0 .5rem; }
+th, td { border: 1px solid var(--line); padding: .35rem .55rem; text-align: left; vertical-align: top; }
+th { background: var(--surface); font-weight: 600; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+table.heat { min-width: 0; }
+table.heat th.col { height: 9.5rem; padding: .35rem .2rem; vertical-align: bottom; }
+table.heat th.col span { writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; }
+table.heat td { text-align: center; min-width: 2.4rem; padding: .3rem .2rem; font-variant-numeric: tabular-nums; }
+table.heat td.self { background: var(--surface); color: var(--muted); }
+.legend { display: flex; align-items: center; gap: .5rem; font-size: .85rem; color: var(--muted); margin: .25rem 0 1rem; flex-wrap: wrap; }
+.legend .ramp { width: 8rem; height: .7rem; border: 1px solid var(--line); background: linear-gradient(to right, hsl(215,70%,97%), hsl(215,70%,28%)); }
+details { margin: .5rem 0 1rem; }
+summary { cursor: pointer; color: var(--accent); }
+pre { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: .75rem; overflow-x: auto; font-size: .85rem; }
+.howto { color: var(--muted); font-size: .9rem; margin: .25rem 0 .75rem; }
+svg.dendro { width: 100%; height: auto; max-width: 100%; display: block; }
+svg.dendro .branch { stroke: var(--fg); fill: none; stroke-width: 1.5; }
+svg.dendro .cut { stroke: var(--accent); stroke-dasharray: 5 4; stroke-width: 1.5; }
+svg.dendro text { fill: var(--fg); font: 12px system-ui, sans-serif; }
+svg.dendro .tick { fill: var(--muted); }
+svg.dendro .axis { stroke: var(--line); }
+figure { margin: 1rem 0; }
+figure img { max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+figcaption { color: var(--muted); font-size: .9rem; }
+footer { margin-top: 3rem; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+@media print { details > summary { display: none; } details { display: block; } }
+</style>
+</head>
+<body>
+<main>
+{{BODY}}
+</main>
+</body>
+</html>

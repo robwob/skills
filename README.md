@@ -66,8 +66,9 @@ empty and the skill uses its stated default and tells you it did.
 | [`usability-test-plan`](plugins/ux-research/skills/usability-test-plan/) | Plans a moderated or unmoderated test, sizes the sample, and reports every stated rating next to the observed record. |
 | [`survey-questions`](plugins/ux-research/skills/survey-questions/) | Drafts a survey, or audits an existing one for bias and for coverage against a brief. |
 | [`desk-research`](plugins/ux-research/skills/desk-research/) | Competitor and landscape research, weighted by what each source type can and cannot show. Returns hypotheses, not findings about users. |
+| [`card-sort-analysis`](plugins/ux-research/skills/card-sort-analysis/) | Analyses card sort results from your tool's export, from screenshots of its matrix and dendrogram, or from both, and reports what they support with the confidence in each finding stated. Comes with a guide to doing each analysis by hand. |
 
-`ux-research-brief` can orchestrate the other four, or you can run any of them on its own.
+`ux-research-brief` can orchestrate `discussion-guide`, `usability-test-plan`, `survey-questions` and `desk-research`, or you can run any of them on its own. `card-sort-analysis` is for after a card sort has produced results.
 
 ## Install
 

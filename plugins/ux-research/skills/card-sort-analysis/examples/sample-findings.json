@@ -1,0 +1,90 @@
+{
+  "title": "Library website card sort: example report",
+  "date": "21 October 2026",
+  "study": {
+    "tool": "Generic CSV (synthetic example data)",
+    "sort_type": "open",
+    "participants": 19,
+    "cards": 12,
+    "route": "data"
+  },
+  "summary": [
+    "Three groups held up across 19 participants: borrowing, events and learning, and using the library. The four borrowing cards and the four events cards were each grouped together by almost everyone.",
+    "One card, Book a study room, has no clear home. Nine people put it with events and learning, five with borrowing and five with using the library.",
+    "Treat the structure as a draft. A card sort shows how people group things, not whether they can find them, so test it before building on it."
+  ],
+  "proposed_structure": [
+    {
+      "name": "Borrowing",
+      "cards": ["Renew a book", "Reserve a book", "Borrow an e-book", "Return a book"],
+      "note": "Every card was placed here by 84% to 100% of participants.",
+      "confidence": "High",
+      "basis": "computed"
+    },
+    {
+      "name": "Events and learning",
+      "cards": ["Children's story time", "Computer skills class", "Author talk", "Homework club"],
+      "note": "Placed here by 89% to 95% of the participants who sorted each card.",
+      "confidence": "High",
+      "basis": "computed"
+    },
+    {
+      "name": "Using the library",
+      "cards": ["Print and copy", "Join the library", "Opening hours"],
+      "note": "Print and copy and Opening hours were firm. Join the library was placed here by 68% (interval 46% to 85%), and six people put it with borrowing.",
+      "confidence": "Medium",
+      "basis": "computed"
+    },
+    {
+      "name": "No clear home yet",
+      "cards": ["Book a study room"],
+      "note": "Split three ways, so it is shown apart from the groups rather than forced into one.",
+      "confidence": "Low",
+      "basis": "computed"
+    }
+  ],
+  "findings": [
+    {
+      "headline": "Three groups re-formed in almost every resample",
+      "evidence": "Resampling the participants 1,000 times, the borrowing group re-formed with a mean overlap of 0.99, the events group 0.94 and the practical group 0.94. All three are in the stable band, which comes from general clustering guidance rather than from card sort research.",
+      "confidence": "High",
+      "basis": "computed"
+    },
+    {
+      "headline": "Book a study room is split three ways",
+      "evidence": "9 of 19 participants put it with events and learning (47%, interval 27% to 68%), 5 with borrowing and 5 with using the library. It joins the events group at only 43% similarity, below the 50% cut, so it sits alone.",
+      "confidence": "High",
+      "basis": "computed"
+    },
+    {
+      "headline": "Join the library is mostly a practical task, with a borrowing minority",
+      "evidence": "13 of 19 participants (68%, interval 46% to 85%) put it with using the library and 6 with borrowing. The interval is wide, so the true split could be closer to even.",
+      "confidence": "Medium",
+      "basis": "computed"
+    },
+    {
+      "headline": "The structure depends on a judgement about where to cut",
+      "evidence": "Between a 30% and a 70% cut the number of groups ranges from 3 to 5. The borrowing and events groups hold across the whole range. At a 40% cut or lower, Book a study room joins the events group, and at 70% Join the library separates from the other two practical cards.",
+      "confidence": "Medium",
+      "basis": "computed"
+    }
+  ],
+  "recommendations": [
+    {
+      "text": "Take the three main groups into a tree test as the proposed top level, with Book a study room placed under each of the three groups in turn.",
+      "confidence": "Medium",
+      "basis": "judgement"
+    },
+    {
+      "text": "Ask a few participants where they would look for Book a study room, and what they expect to find next to it, before deciding whether the label or the placement is the problem.",
+      "confidence": "Medium",
+      "basis": "judgement"
+    },
+    {
+      "text": "Check whether Join the library reads as a borrowing task (getting a card) or a visiting task, since a third of participants placed it with borrowing.",
+      "confidence": "Low",
+      "basis": "judgement"
+    }
+  ],
+  "next_step": "Run a tree test of the proposed structure, with the study-room card tested in each of its three candidate homes. Participant P19 was excluded for putting every card in one group, and P20 left two cards unsorted and stayed in, counted under the singleton setting."
+}

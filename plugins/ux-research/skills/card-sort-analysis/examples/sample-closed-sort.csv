@@ -1,0 +1,361 @@
+participant_id,card,category,category_preset
+P01,Renew a book,Borrowing,true
+P01,Reserve a book,Borrowing,true
+P01,Borrow an e-book,Borrowing,true
+P01,Return a book,Borrowing,true
+P01,Children's story time,Events and learning,true
+P01,Computer skills class,Events and learning,true
+P01,Author talk,Events and learning,true
+P01,Homework club,Events and learning,true
+P01,Book a study room,Using the library,true
+P01,Print and copy,Using the library,true
+P01,Join the library,Using the library,true
+P01,Opening hours,Using the library,true
+P02,Renew a book,Borrowing,true
+P02,Reserve a book,Borrowing,true
+P02,Borrow an e-book,Borrowing,true
+P02,Return a book,Borrowing,true
+P02,Children's story time,Events and learning,true
+P02,Computer skills class,Borrowing,true
+P02,Author talk,Events and learning,true
+P02,Homework club,Events and learning,true
+P02,Book a study room,Borrowing,true
+P02,Print and copy,Using the library,true
+P02,Join the library,Borrowing,true
+P02,Opening hours,Using the library,true
+P03,Renew a book,Borrowing,true
+P03,Reserve a book,Borrowing,true
+P03,Borrow an e-book,Borrowing,true
+P03,Return a book,Borrowing,true
+P03,Children's story time,Events and learning,true
+P03,Computer skills class,Events and learning,true
+P03,Author talk,Events and learning,true
+P03,Homework club,Events and learning,true
+P03,Book a study room,Events and learning,true
+P03,Print and copy,Using the library,true
+P03,Join the library,Using the library,true
+P03,Opening hours,Using the library,true
+P04,Renew a book,Borrowing,true
+P04,Reserve a book,Borrowing,true
+P04,Borrow an e-book,Borrowing,true
+P04,Return a book,Borrowing,true
+P04,Children's story time,Events and learning,true
+P04,Computer skills class,Events and learning,true
+P04,Author talk,Events and learning,true
+P04,Homework club,Events and learning,true
+P04,Book a study room,Using the library,true
+P04,Print and copy,Using the library,true
+P04,Join the library,Using the library,true
+P04,Opening hours,Using the library,true
+P05,Renew a book,Borrowing,true
+P05,Reserve a book,Borrowing,true
+P05,Borrow an e-book,Using the library,true
+P05,Return a book,Borrowing,true
+P05,Children's story time,Events and learning,true
+P05,Computer skills class,Events and learning,true
+P05,Author talk,Events and learning,true
+P05,Homework club,Events and learning,true
+P05,Book a study room,Using the library,true
+P05,Print and copy,Using the library,true
+P05,Join the library,Borrowing,true
+P05,Opening hours,Using the library,true
+P06,Renew a book,Borrowing,true
+P06,Reserve a book,Borrowing,true
+P06,Borrow an e-book,Borrowing,true
+P06,Return a book,Borrowing,true
+P06,Children's story time,Events and learning,true
+P06,Computer skills class,Events and learning,true
+P06,Author talk,Events and learning,true
+P06,Homework club,Borrowing,true
+P06,Book a study room,Using the library,true
+P06,Print and copy,Using the library,true
+P06,Join the library,Using the library,true
+P06,Opening hours,Using the library,true
+P07,Renew a book,Borrowing,true
+P07,Reserve a book,Using the library,true
+P07,Borrow an e-book,Borrowing,true
+P07,Return a book,Borrowing,true
+P07,Children's story time,Events and learning,true
+P07,Computer skills class,Events and learning,true
+P07,Author talk,Events and learning,true
+P07,Homework club,Events and learning,true
+P07,Book a study room,Using the library,true
+P07,Print and copy,Using the library,true
+P07,Join the library,Using the library,true
+P07,Opening hours,Using the library,true
+P08,Renew a book,Borrowing,true
+P08,Reserve a book,Borrowing,true
+P08,Borrow an e-book,Borrowing,true
+P08,Return a book,Borrowing,true
+P08,Children's story time,Events and learning,true
+P08,Computer skills class,Events and learning,true
+P08,Author talk,Events and learning,true
+P08,Homework club,Events and learning,true
+P08,Book a study room,Events and learning,true
+P08,Print and copy,Using the library,true
+P08,Join the library,Using the library,true
+P08,Opening hours,Using the library,true
+P09,Renew a book,Borrowing,true
+P09,Reserve a book,Borrowing,true
+P09,Borrow an e-book,Events and learning,true
+P09,Return a book,Borrowing,true
+P09,Children's story time,Events and learning,true
+P09,Computer skills class,Events and learning,true
+P09,Author talk,Events and learning,true
+P09,Homework club,Events and learning,true
+P09,Book a study room,Events and learning,true
+P09,Print and copy,Using the library,true
+P09,Join the library,Using the library,true
+P09,Opening hours,Using the library,true
+P10,Renew a book,Borrowing,true
+P10,Reserve a book,Borrowing,true
+P10,Borrow an e-book,Events and learning,true
+P10,Return a book,Borrowing,true
+P10,Children's story time,Events and learning,true
+P10,Computer skills class,Events and learning,true
+P10,Author talk,Events and learning,true
+P10,Homework club,Events and learning,true
+P10,Book a study room,Events and learning,true
+P10,Print and copy,Using the library,true
+P10,Join the library,Borrowing,true
+P10,Opening hours,Using the library,true
+P11,Renew a book,Borrowing,true
+P11,Reserve a book,Borrowing,true
+P11,Borrow an e-book,Borrowing,true
+P11,Return a book,Borrowing,true
+P11,Children's story time,Events and learning,true
+P11,Computer skills class,Events and learning,true
+P11,Author talk,Events and learning,true
+P11,Homework club,Events and learning,true
+P11,Book a study room,Using the library,true
+P11,Print and copy,Using the library,true
+P11,Join the library,Using the library,true
+P11,Opening hours,Using the library,true
+P12,Renew a book,Borrowing,true
+P12,Reserve a book,Borrowing,true
+P12,Borrow an e-book,Borrowing,true
+P12,Return a book,Borrowing,true
+P12,Children's story time,Events and learning,true
+P12,Computer skills class,Events and learning,true
+P12,Author talk,Events and learning,true
+P12,Homework club,Events and learning,true
+P12,Book a study room,Using the library,true
+P12,Print and copy,Using the library,true
+P12,Join the library,Borrowing,true
+P12,Opening hours,Events and learning,true
+P13,Renew a book,Borrowing,true
+P13,Reserve a book,Borrowing,true
+P13,Borrow an e-book,Borrowing,true
+P13,Return a book,Borrowing,true
+P13,Children's story time,Events and learning,true
+P13,Computer skills class,Events and learning,true
+P13,Author talk,Events and learning,true
+P13,Homework club,Events and learning,true
+P13,Book a study room,Using the library,true
+P13,Print and copy,Borrowing,true
+P13,Join the library,Using the library,true
+P13,Opening hours,Using the library,true
+P14,Renew a book,Borrowing,true
+P14,Reserve a book,Borrowing,true
+P14,Borrow an e-book,Borrowing,true
+P14,Return a book,Using the library,true
+P14,Children's story time,Events and learning,true
+P14,Computer skills class,Events and learning,true
+P14,Author talk,Events and learning,true
+P14,Homework club,Events and learning,true
+P14,Book a study room,Using the library,true
+P14,Print and copy,Using the library,true
+P14,Join the library,Using the library,true
+P14,Opening hours,Using the library,true
+P15,Renew a book,Borrowing,true
+P15,Reserve a book,Borrowing,true
+P15,Borrow an e-book,Borrowing,true
+P15,Return a book,Using the library,true
+P15,Children's story time,Events and learning,true
+P15,Computer skills class,Events and learning,true
+P15,Author talk,Events and learning,true
+P15,Homework club,Events and learning,true
+P15,Book a study room,Using the library,true
+P15,Print and copy,Using the library,true
+P15,Join the library,Using the library,true
+P15,Opening hours,Using the library,true
+P16,Renew a book,Borrowing,true
+P16,Reserve a book,Borrowing,true
+P16,Borrow an e-book,Borrowing,true
+P16,Return a book,Borrowing,true
+P16,Children's story time,Borrowing,true
+P16,Computer skills class,Events and learning,true
+P16,Author talk,Borrowing,true
+P16,Homework club,Using the library,true
+P16,Book a study room,Borrowing,true
+P16,Print and copy,Using the library,true
+P16,Join the library,Using the library,true
+P16,Opening hours,Using the library,true
+P17,Renew a book,Borrowing,true
+P17,Reserve a book,Borrowing,true
+P17,Borrow an e-book,Borrowing,true
+P17,Return a book,Borrowing,true
+P17,Children's story time,Events and learning,true
+P17,Computer skills class,Events and learning,true
+P17,Author talk,Events and learning,true
+P17,Homework club,Events and learning,true
+P17,Book a study room,Using the library,true
+P17,Print and copy,Using the library,true
+P17,Join the library,Borrowing,true
+P17,Opening hours,Using the library,true
+P18,Renew a book,Borrowing,true
+P18,Reserve a book,Borrowing,true
+P18,Borrow an e-book,Borrowing,true
+P18,Return a book,Borrowing,true
+P18,Children's story time,Events and learning,true
+P18,Computer skills class,Events and learning,true
+P18,Author talk,Using the library,true
+P18,Homework club,Events and learning,true
+P18,Book a study room,Using the library,true
+P18,Print and copy,Borrowing,true
+P18,Join the library,Using the library,true
+P18,Opening hours,Using the library,true
+P19,Renew a book,Borrowing,true
+P19,Reserve a book,Borrowing,true
+P19,Borrow an e-book,Borrowing,true
+P19,Return a book,Borrowing,true
+P19,Children's story time,Events and learning,true
+P19,Computer skills class,Events and learning,true
+P19,Author talk,Using the library,true
+P19,Homework club,Events and learning,true
+P19,Book a study room,Using the library,true
+P19,Print and copy,Using the library,true
+P19,Join the library,Using the library,true
+P19,Opening hours,Using the library,true
+P20,Renew a book,Using the library,true
+P20,Reserve a book,Borrowing,true
+P20,Borrow an e-book,Borrowing,true
+P20,Return a book,Events and learning,true
+P20,Children's story time,Events and learning,true
+P20,Computer skills class,Events and learning,true
+P20,Author talk,Events and learning,true
+P20,Homework club,Events and learning,true
+P20,Book a study room,Using the library,true
+P20,Print and copy,Using the library,true
+P20,Join the library,Using the library,true
+P20,Opening hours,Using the library,true
+P21,Renew a book,Borrowing,true
+P21,Reserve a book,Borrowing,true
+P21,Borrow an e-book,Borrowing,true
+P21,Return a book,Borrowing,true
+P21,Children's story time,Events and learning,true
+P21,Computer skills class,Events and learning,true
+P21,Author talk,Events and learning,true
+P21,Homework club,Events and learning,true
+P21,Book a study room,Using the library,true
+P21,Print and copy,Using the library,true
+P21,Join the library,Using the library,true
+P21,Opening hours,Using the library,true
+P22,Renew a book,Borrowing,true
+P22,Reserve a book,Borrowing,true
+P22,Borrow an e-book,Borrowing,true
+P22,Return a book,Borrowing,true
+P22,Children's story time,Events and learning,true
+P22,Computer skills class,Events and learning,true
+P22,Author talk,Events and learning,true
+P22,Homework club,Events and learning,true
+P22,Book a study room,Events and learning,true
+P22,Print and copy,Using the library,true
+P22,Join the library,Using the library,true
+P22,Opening hours,Using the library,true
+P23,Renew a book,Borrowing,true
+P23,Reserve a book,Borrowing,true
+P23,Borrow an e-book,Borrowing,true
+P23,Return a book,Borrowing,true
+P23,Children's story time,Events and learning,true
+P23,Computer skills class,Events and learning,true
+P23,Author talk,Events and learning,true
+P23,Homework club,Events and learning,true
+P23,Book a study room,Events and learning,true
+P23,Print and copy,Using the library,true
+P23,Join the library,Borrowing,true
+P23,Opening hours,Using the library,true
+P24,Renew a book,Borrowing,true
+P24,Reserve a book,Borrowing,true
+P24,Borrow an e-book,Borrowing,true
+P24,Return a book,Borrowing,true
+P24,Children's story time,Events and learning,true
+P24,Computer skills class,Events and learning,true
+P24,Author talk,Events and learning,true
+P24,Homework club,Borrowing,true
+P24,Book a study room,Events and learning,true
+P24,Print and copy,Using the library,true
+P24,Join the library,Borrowing,true
+P24,Opening hours,Using the library,true
+P25,Renew a book,Borrowing,true
+P25,Reserve a book,Events and learning,true
+P25,Borrow an e-book,Borrowing,true
+P25,Return a book,Borrowing,true
+P25,Children's story time,Events and learning,true
+P25,Computer skills class,Events and learning,true
+P25,Author talk,Events and learning,true
+P25,Homework club,Events and learning,true
+P25,Book a study room,Using the library,true
+P25,Print and copy,Using the library,true
+P25,Join the library,Borrowing,true
+P25,Opening hours,Using the library,true
+P26,Renew a book,Borrowing,true
+P26,Reserve a book,Borrowing,true
+P26,Borrow an e-book,Borrowing,true
+P26,Return a book,Borrowing,true
+P26,Children's story time,Events and learning,true
+P26,Computer skills class,Using the library,true
+P26,Author talk,Events and learning,true
+P26,Homework club,Borrowing,true
+P26,Book a study room,Using the library,true
+P26,Print and copy,Using the library,true
+P26,Join the library,Borrowing,true
+P26,Opening hours,Using the library,true
+P27,Renew a book,Borrowing,true
+P27,Reserve a book,Borrowing,true
+P27,Borrow an e-book,Borrowing,true
+P27,Return a book,Borrowing,true
+P27,Children's story time,Events and learning,true
+P27,Computer skills class,Events and learning,true
+P27,Author talk,Events and learning,true
+P27,Homework club,Events and learning,true
+P27,Book a study room,Events and learning,true
+P27,Print and copy,Using the library,true
+P27,Join the library,Using the library,true
+P27,Opening hours,Using the library,true
+P28,Renew a book,Borrowing,true
+P28,Reserve a book,Borrowing,true
+P28,Borrow an e-book,Borrowing,true
+P28,Return a book,Using the library,true
+P28,Children's story time,Events and learning,true
+P28,Computer skills class,Using the library,true
+P28,Author talk,Events and learning,true
+P28,Homework club,Events and learning,true
+P28,Book a study room,Using the library,true
+P28,Print and copy,Using the library,true
+P28,Join the library,Using the library,true
+P28,Opening hours,Using the library,true
+P29,Renew a book,Borrowing,true
+P29,Reserve a book,Borrowing,true
+P29,Borrow an e-book,Borrowing,true
+P29,Return a book,Borrowing,true
+P29,Children's story time,Borrowing,true
+P29,Computer skills class,Borrowing,true
+P29,Author talk,Borrowing,true
+P29,Homework club,Borrowing,true
+P29,Book a study room,Borrowing,true
+P29,Print and copy,Borrowing,true
+P29,Join the library,Borrowing,true
+P29,Opening hours,Borrowing,true
+P30,Renew a book,Borrowing,true
+P30,Reserve a book,Borrowing,true
+P30,Borrow an e-book,Borrowing,true
+P30,Return a book,Borrowing,true
+P30,Children's story time,Events and learning,true
+P30,Computer skills class,Events and learning,true
+P30,Author talk,,
+P30,Homework club,Events and learning,true
+P30,Book a study room,Events and learning,true
+P30,Print and copy,Using the library,true
+P30,Join the library,Using the library,true
+P30,Opening hours,,

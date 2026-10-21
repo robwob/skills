@@ -9,8 +9,8 @@
     {
       "name": "ux-research",
       "source": "./plugins/ux-research",
-      "description": "Five UX research skills: scope a brief, write a discussion guide, plan a usability test, draft or audit a survey, and run desk research.",
-      "version": "1.0.0",
+      "description": "Six UX research skills: scope a brief, write a discussion guide, plan a usability test, draft or audit a survey, run desk research, and analyse card sort results.",
+      "version": "1.1.0",
       "displayName": "UX Research",
       "category": "Research",
       "tags": [
@@ -18,7 +18,8 @@
         "research",
         "user-research",
         "surveys",
-        "usability"
+        "usability",
+        "card-sorting"
       ]
     },
     {
