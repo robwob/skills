@@ -17,7 +17,7 @@ Every entry carries a tier. The tier decides the severity of a finding.
 | **Standard** | A published, citable requirement, in practice a WCAG success criterion. Objectively measurable. | A defect. Not negotiable by taste. |
 | **Evidence** | A quantified finding from a primary research source. | A strong finding. Overriding it needs a stated reason. |
 | **Convention** | Widely adopted practice where established systems disagree with each other. | A deviation. Fine if deliberate and consistent, a finding if accidental. |
-| **House** | The owner's own evidenced preferences, from `~/.claude/house.md`. Applies only to their work. | A defect in their work, irrelevant in anyone else's. |
+| **House rules** | The owner's own evidenced preferences, from the `## Visual` section of their house rules. Applies only to their work. | A defect in their work, irrelevant in anyone else's. |
 
 Folklore is excluded. Several things every designer "knows" are in **Excluded, and why** at the end,
 because they have no source and should not be re-added.
@@ -36,18 +36,19 @@ it has not been measured, but the warning is a prompt, not a substitute for doin
 
 ---
 
-## The House tier
+## The House rules tier
 
-For the owner's own work, read `~/.claude/house.md`: a document of their evidenced visual
-preferences, built up from repeated observations rather than written in one sitting. It may point
-elsewhere for the detail, in which case follow it.
+For the owner's own work, read the `## Visual` section of their house rules (lookup order in
+`SKILL.md`, Personalisation): a document of their evidenced visual preferences, built up from
+repeated observations rather than written in one sitting. It may point elsewhere for the detail, in
+which case follow it.
 
-**Do not copy those rules into this file.** The house file is the single copy and it changes as
-observations accumulate. Read it at review time.
+**Do not copy those rules into this file.** The house rules are the single copy and they change as
+observations accumulate. Read them at review time.
 
-A house file tends to converge on a few entries that produce most findings. One worth naming, because
-it recurs across every house file I have seen, is relational spacing: a gap is set from a measured
-relationship to a neighbouring gap, never from a value that merely looks close. Treat the house file
+A set of house rules tends to converge on a few entries that produce most findings. One worth naming, because
+it recurs across every set of house rules I have seen, is relational spacing: a gap is set from a measured
+relationship to a neighbouring gap, never from a value that merely looks close. Treat the house rules
 as the authority for the rest.
 
 - Spacing and size are stated as **relationships** between elements, not numbers. A value that merely
@@ -56,7 +57,7 @@ as the authority for the rest.
 - **Colour is a closed system.** An introduced colour reads as a bug, and weight travels with colour.
 - **Competing weights are a defect**, especially a secondary heading fighting a primary one.
 
-Where a House rule and a Convention entry disagree on your own work, House wins. Where House
+Where a House rule and a Convention entry disagree on your own work, House rules win. Where House rules
 disagrees with a Standard, the Standard wins: taste does not override an accessibility requirement.
 
 ---
@@ -267,5 +268,5 @@ Kept so they are not re-added.
 
 W3C WAI (WCAG 2.1 and 2.2 Understanding documents), Nielsen Norman Group Gestalt series, Baymard
 Institute, Apple Human Interface Guidelines, Material Design 2 and 3, Adrian Roselli on WCAG 3
-contrast status, and `~/.claude/house.md` for the House tier. Individual URLs sit with
+contrast status, and the owner's house rules for the House rules tier. Individual URLs sit with
 each entry above.

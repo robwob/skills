@@ -90,6 +90,25 @@ a content review becomes a style argument.
 
 ---
 
+## Personalisation
+
+This skill reads the `## Writing` section of the house rules, and applies it to the owner's own
+copy only. On anyone else's copy it does not apply, and the product's own declared voice is the
+reference instead. If unclear whose copy it is, ask.
+
+**Lookup:** a project `.house-rules.md` (searched upward from the artefact's folder), then the user file
+`~/.config/house-rules/house-rules.md`, then the legacy `~/.claude/house.md`. The first file with a non-empty
+`## Writing` section wins whole. Sections are never merged across files. A section may point to
+another file for the detail, in which case follow it.
+
+**Default when empty:** no House rules tier. Review against Standard, Evidence and Convention only.
+
+End the report with one line saying what was used, for example: "Applied: Writing from user house
+rules." With no file at all: "Applied: no house rules, defaults only. `house-rules-setup` can create
+them." Do not question the user about a file they may not know exists.
+
+---
+
 ## Process
 
 ### Step 1, Inventory the strings
@@ -124,6 +143,7 @@ it, is the one most often missing, and its absence is the highest-value content 
 |---|---|
 | **Blocker** | Fails a **Standard**: link purpose, alt text, sensory characteristics. Or copy that is actively misleading about what an action does. |
 | **Major** | Contradicts **Evidence**: an error message with no fix, an empty state that explains nothing, a heading that says nothing in the position that does the most work. |
+| **Major** (own copy) | On the owner's own copy, a breach of their **House rules** from `## Writing`. Never applied to anyone else's copy. |
 | **Minor** | A **Convention** deviation or an inconsistency that does not impede the reader. |
 | **Suggestion** | A rewrite that is better but not tied to any entry. Kept in its own section, never mixed with findings. |
 
@@ -133,7 +153,8 @@ That last row is the discipline that keeps this skill honest. Preference gets la
 
 **Every finding carries the replacement string, written out.** A content finding without the new
 words is half a finding. Match the product's voice where one is declared; where none is, match the
-register of the copy that already works.
+register of the copy that already works. On the owner's own copy, every replacement obeys their
+`## Writing` rules.
 
 **A finding you could have written without reading this copy is not a finding.** "Make the copy
 clearer" is not a finding. "The submit button says 'Continue', but it charges the card. 'Pay 24.99'
@@ -211,6 +232,7 @@ A single self-contained HTML file. All CSS and JS inline.
   standardise on.
 - **Suggestions**: rewrites not tied to an entry, clearly separated.
 - **Not assessed**: the strings the input kept out of reach.
+- **Applied**: the one-line house rules statement from Personalisation.
 - **Download as PNG**, client-side, with a fallback if the CDN is unavailable.
 
 **HTML requirements**: current and proposed must be distinguishable without relying on colour alone.

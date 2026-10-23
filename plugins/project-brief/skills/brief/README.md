@@ -25,8 +25,10 @@ symlink fails silently, so confirm it loaded:
 
 ## If someone has shared this with you
 
-**Replace `references/house-rules.md` with your own.** It is the only file tied to a particular
-person or workspace, and it holds four things:
+**Make your own house rules.** Run `house-rules-setup`, or write `.house-rules.md` in the project or
+`~/.config/house-rules/house-rules.md` for yourself. `references/house-rules.md` is the bundled
+fallback and template. Your rules are the only part tied to a particular person or workspace, and
+they hold four things:
 
 1. where shared components live, so the reuse audit knows where to search
 2. which design skills you have, if any, so the route can name them
@@ -90,4 +92,4 @@ Every stage in the plan is one of five, shown in its own column:
 | `SKILL.md` | The interview, the gates, the approval rules |
 | `references/sections.md` | The sixteen sections, with the test each answer must pass |
 | `references/stages.md` | Stage catalogue, activity types, inclusion rules, ordering principles |
-| `references/house-rules.md` | **The only workspace-specific file. Replace this one.** |
+| `references/house-rules.md` | Bundled fallback and template for the house rules. Your own rules take precedence |

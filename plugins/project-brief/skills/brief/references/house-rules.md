@@ -3,15 +3,16 @@
 **This is the only file in the skill tied to a particular person or workspace. Everything else is
 generic. What follows is a template.**
 
-The skill prefers `~/.claude/house.md` when that exists, so the recommended approach is to write
-your rules there and leave this file alone. A file outside the repo does not need re-editing every
-time you pull, and it cannot be committed by accident. Failing that, replace the sections here with
+The skill reads a project `.house-rules.md` or your user file `~/.config/house-rules/house-rules.md`
+first, so the recommended approach is to run `house-rules-setup` and leave this file alone. A user
+file outside any repo does not need re-editing every time you pull, and it cannot be committed by
+accident. Failing that, replace the sections here with
 your own; the rest of the skill works unchanged either way. Leave a section empty and the skill uses
 the stated default instead of guessing.
 
 ---
 
-## Where to look during the reuse audit
+## Reuse
 
 The audit in section 13 needs to know where shared things live. List real paths.
 
@@ -24,7 +25,7 @@ shared locations, then search sibling directories of the project folder. Report 
 
 ---
 
-## Design stages and the skills behind them
+## Stages
 
 The catalogue in `stages.md` describes design stages generically. If named skills exist for them,
 route to those instead of describing the work. Fill in whichever rows you have skills for and
@@ -44,7 +45,7 @@ choose the method. Never invent a skill name.
 
 ---
 
-## Writing style
+## Writing
 
 Replace with your own. These are the defaults the skill assumes.
 
@@ -54,7 +55,7 @@ Replace with your own. These are the defaults the skill assumes.
 
 ---
 
-## Constraints that override a route
+## Constraints
 
 Things true of your setup that a generic route would get wrong. Examples of the kind of thing that
 belongs here, not prescriptions:

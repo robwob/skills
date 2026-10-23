@@ -46,6 +46,11 @@ is really a content rule. **Evidence** is a quantified primary-source finding. *
 adopted practice where systems disagree. **Voice** is judged against a product's own declared voice,
 and where none is declared there is nothing to breach.
 
+**House rules.** An optional plain markdown file that adapts the skill to you without editing it. A
+project `.house-rules.md` takes precedence over your personal `~/.config/house-rules/house-rules.md`. This skill reads
+the `## Writing` section and applies it to your own copy only, including the replacements it writes.
+The `house-rules-setup` skill creates the file by interview.
+
 There is a fourth severity, **Suggestion**, for a rewrite that is better but not tied to any entry. It
 is kept in its own section and never mixed with findings. That separation is what stops a content
 review becoming an argument about taste.

@@ -80,15 +80,33 @@ silently as if it had been checked.
 
 Establish this before writing findings, because it decides which tiers apply.
 
-- **The owner's own work**: read `~/.claude/house.md` if it exists and apply the **House** tier
-  alongside Standard, Evidence and Convention. That file may point somewhere else for the detail, in
-  which case follow it. If it does not exist, ask whether there is a house file and where; if there
-  is none, the House tier simply does not apply.
+- **The owner's own work**: apply the **House rules** tier from the `## Visual` section of the house rules
+  (see Personalisation below), alongside Standard, Evidence and Convention. A project file applies to
+  artefacts in that project. A user-level file applies to the owner's own work wherever it is.
 - **Anyone else's work**: Standard, Evidence and Convention only. House rules are one team's taste and
   are not a defect in someone else's design.
+- **No house rules found**: the House rules tier does not apply. Say so once in the report and carry on.
 
 If unclear whose work it is, ask. Applying House rules to a competitor's site produces confident
 nonsense.
+
+### Personalisation
+
+This skill reads two sections of the house rules: `## Visual` and `## Reuse`.
+
+**Lookup, per section:** a project `.house-rules.md` (searched upward from the artefact's folder), then
+the user file `~/.config/house-rules/house-rules.md`, then the legacy `~/.claude/house.md`. The first file with a
+non-empty section wins that section whole. Sections are never merged across files. A section may
+point to another file for the detail, in which case follow it.
+
+| Section | Used for | Default when empty |
+|---|---|---|
+| `## Visual` | The House rules tier | No House rules tier |
+| `## Reuse` | Where to look for shared tokens and components when checking system conformance | The nearest `CLAUDE.md` or `AGENTS.md`, then sibling directories. Report where you looked |
+
+End the report with one line saying what was used, for example: "Applied: Visual from project
+`.house-rules.md`, Reuse by default." With no file at all: "Applied: no house rules, defaults only.
+`house-rules-setup` can create one." Do not question the user about a file they may not know exists.
 
 ### Find the design system the file actually declares
 
@@ -101,7 +119,8 @@ Before reviewing, look for which system this artefact follows, in this order:
    where to go and read it.
 2. **A token block in the file itself**, a `:root` or component-scoped custom property set. The tokens
    are the system for review purposes even if nothing external documents them.
-3. **A project `design-system/components.css`**, or the project's own `CLAUDE.md`.
+3. **A project `design-system/components.css`**, or the project's own `CLAUDE.md`. The house rules'
+   `## Reuse` section names where these live.
 4. **A house visual-system skill or document**, if one exists and the artefact belongs to that house.
 
 Then check conformance against **that** system and report it as its own section, marked as system
@@ -150,7 +169,7 @@ finding, and it is the one most often missed because the missing thing is not on
 | Severity | Bar |
 |---|---|
 | **Blocker** | Fails a **Standard**-tier entry. Contrast, target size, colour-alone, focus visibility and reflow failures land here. |
-| **Major** | Contradicts **Evidence**, or breaks hierarchy or grouping badly enough that the design misreads. On your own work, a **House** violation is Major. |
+| **Major** | Contradicts **Evidence**, or breaks hierarchy or grouping badly enough that the design misreads. On your own work, a **House rules** violation is Major. |
 | **Minor** | A **Convention** deviation, or a craft inconsistency that does not change how the design reads. |
 
 Severity comes from the tier plus the impact, not from strength of feeling.
@@ -190,9 +209,9 @@ established design systems. Anything else is folklore and belongs in **Excluded,
 on why it was rejected. This library already rejects the golden ratio, 60-30-10 and a minimum font
 size, so the bar is real.
 
-**House** additions are different: they are promoted from the owner's own house file, not proposed
-here. If a review turns up a repeated preference that the house file has not recorded, record it there
-rather than adding it to this file.
+**House rules** additions are different: they are promoted from the owner's own house rules, not proposed
+here. If a review turns up a repeated preference that the house rules have not recorded, suggest
+recording it there rather than adding it to this file.
 
 **Format:**
 
@@ -240,6 +259,7 @@ A single self-contained HTML file. All CSS and JS inline.
   required, the fix, the severity, and the criterion with its tier.
 - **System conformance**, only for your own work, kept separate from general best practice.
 - **Not assessed**: what the input and method left unmeasured.
+- **Applied**: the one-line house rules statement from Personalisation.
 - **Download as PNG**, client-side, with a fallback if the CDN is unavailable.
 
 **HTML requirements**: severity separable without relying on colour alone, because a UI review that

@@ -97,6 +97,28 @@ finding can be tested against whether it obstructs that task.
 
 ---
 
+## Personalisation
+
+This skill reads two sections of the house rules: `## Interaction` and `## Reuse`. Interaction
+supplies the **House rules** tier and applies to the owner's own work only. Never apply it to
+someone else's design. If unclear whose work it is, ask.
+
+**Lookup, per section:** a project `.house-rules.md` (searched upward from the artefact's folder), then
+the user file `~/.config/house-rules/house-rules.md`, then the legacy `~/.claude/house.md`. The first file with a
+non-empty section wins that section whole. Sections are never merged across files. A section may
+point to another file for the detail, in which case follow it.
+
+| Section | Used for | Default when empty |
+|---|---|---|
+| `## Interaction` | The House rules tier | No House rules tier |
+| `## Reuse` | Where sibling flows and shared patterns live, so a flow can be checked against how the same task is already handled | The nearest `CLAUDE.md` or `AGENTS.md`, then sibling directories. Report where you looked |
+
+End the report with one line saying what was used, for example: "Applied: Interaction from project
+`.house-rules.md`, Reuse by default." With no file at all: "Applied: no house rules, defaults only.
+`house-rules-setup` can create them." Do not question the user about a file they may not know exists.
+
+---
+
 ## Process
 
 ### Step 1, Observe before judging
@@ -128,6 +150,7 @@ structural gap and the easiest to miss when reviewing a happy-path mock.
 | **Blocker** | Fails a **Standard**-tier entry, or prevents task completion outright. Accessibility failures land here by default. |
 | **Major** | Contradicts an **Evidence**-tier finding, or measurably obstructs the task without stopping it. |
 | **Minor** | A **Convention** deviation, or friction that is real but survivable. |
+| **Major** (own work) | On the owner's own work, a breach of their **House rules** from `## Interaction`. Never above a Standard. |
 
 Severity comes from the tier plus the task impact, not from how strongly the reviewer feels.
 
@@ -215,6 +238,7 @@ CDN for PNG export.
   card carrying: the element, what is true now, what it should be, the severity, the tier and source,
   and the Nielsen heuristic it maps to as a small label.
 - **Not assessed**: what the input format prevented checking.
+- **Applied**: the one-line house rules statement from Personalisation.
 - **Angles, if any**: things that work but could be a better strategic bet, named and handed to
   `define-levers` rather than dressed up as defects.
 - **Download as PNG**, client-side, with a fallback message if the CDN is unavailable.

@@ -26,9 +26,9 @@ Checks a design against a bar. Every finding carries a severity and the measured
 
 Entries in the review libraries are tiered. **Standard** is a citable requirement and a violation
 is a defect. **Evidence** is a quantified primary-source finding. **Convention** is adopted practice
-where established systems disagree. **House** is your own evidenced preferences, read at review time
-from `~/.claude/house.md`, and applied only to your own work, never to a competitor's. With no such
-file the House tier does not apply and the other three still do.
+where established systems disagree. **House rules** are your own evidenced preferences, read at review
+time from your [house rules](#personalise-the-skills), and applied only to your own work, never to a
+competitor's. With no house rules the House rules tier does not apply and the other three still do.
 
 Folklore is excluded and stays excluded. The golden ratio, 60-30-10, a WCAG-backed minimum font
 size and APCA thresholds are each listed in `Excluded, and why` with the reason.
@@ -52,10 +52,23 @@ yourself.
 |---|---|
 | [`brief`](plugins/project-brief/skills/brief/) | Defines why a project is being done before any design or code, then derives the plan from that: which stages it needs, in what order, with review gates. |
 
-`brief` needs one workspace-specific thing: where shared components live, which stages you run, your
-writing conventions. It reads `~/.claude/house.md` when that exists, and falls back to the
-`references/house-rules.md` template, which ships with every section documented. Leave a section
-empty and the skill uses its stated default and tells you it did.
+`brief` needs workspace-specific things: where shared components live, which stages you run, your
+writing conventions, your constraints. It reads them from your [house rules](#personalise-the-skills)
+and falls back to the `references/house-rules.md` template, which ships with every section
+documented. Leave a section empty and the skill uses its stated default and tells you it did.
+
+## Personalise the skills
+
+| Skill | What it does |
+|---|---|
+| [`house-rules-setup`](plugins/house-rules-setup/skills/house-rules-setup/) | Interviews you and writes your house rules: the optional file that adapts the other skills to your preferences without editing them. |
+
+The skills stay generic. Your house rules hold the personal part, in six optional sections: `Visual`,
+`Interaction`, `Writing`, `Reuse`, `Stages` and `Constraints`. A project file `.house-rules.md`
+overrides your personal `~/.config/house-rules/house-rules.md`, section by section, never merged.
+Every report ends with an "Applied:" line saying which rules it used, and a missing section just means
+the skill's own default. The format is in
+[`references/house-rules-spec.md`](plugins/house-rules-setup/skills/house-rules-setup/references/house-rules-spec.md).
 
 ## UX research
 
@@ -79,6 +92,7 @@ claude plugin marketplace add robwob/skills
 claude plugin install design-review@design
 claude plugin install design-strategy@design
 claude plugin install project-brief@design
+claude plugin install house-rules-setup@design
 claude plugin install ux-research@design
 ```
 
@@ -109,7 +123,7 @@ Each skill's own README covers its use and what it produces in more detail.
 ## A note on what is not here
 
 `design-review` and `brief` both mention build stages: wireframes, interaction states, visual
-styling. The skills I use for those stages depend on a local design system and a house visual
+styling. The skills I use for those stages depend on a local design system and a private visual
 language, so they would not work for anyone else and are not published. Where a skill refers to a
 build stage it means the stage, not a skill you are missing.
 

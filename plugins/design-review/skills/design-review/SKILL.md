@@ -68,8 +68,10 @@ them once here is most of the value of running the coordinator.
 2. **The task.** What the user is trying to do. `ux-review` cannot produce a meaningful finding
    without it.
 3. **The reader and moment.** Who is reading, and at what point. `content-review` needs it.
-4. **Whose bar.** The owner's own work, where `ui-review` applies the House tier from their
-   `~/.claude/house.md` and any project design system, or someone else's, where it does not.
+4. **Whose bar.** The owner's own work, where each lens applies the House rules tier from the
+   owner's house rules (`## Visual`, `## Interaction` and `## Writing`, found as each lens's
+   Personalisation section describes) and any project design system, or someone else's, where none of
+   it does. Run the lenses with this answer so each does not ask again.
 
 Then confirm the lenses:
 
@@ -207,6 +209,7 @@ written earlier.
 - **Terminology audit**: from `content-review`, if anything was found.
 - **Angles**: strategic observations, unscored, with the hand-off offer.
 - **Not assessed**: consolidated.
+- **Applied**: which house rules each lens used, from their one-line statements.
 - **Download as PNG**, client-side, with a fallback if the CDN is unavailable.
 
 **HTML requirements**: severity and lens must both be separable without relying on colour alone.

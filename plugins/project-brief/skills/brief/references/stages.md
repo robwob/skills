@@ -112,7 +112,7 @@ Each maps to an existing skill. Do not re-derive what the skill does, just route
 
 ### D1. Strategy: what problem is being solved  *(Research)*
 
-Run by `analyse-themes` where `house-rules.md` names it.
+Run by `analyse-themes` where the house rules name it.
 
 **Include when:** the approach is contested or unknown, meaning section 9 holds no decision on how
 the problem is solved, or section 3 lists functions with no agreed shape.
@@ -120,14 +120,14 @@ the problem is solved, or section 3 lists functions with no agreed shape.
 
 ### D2. Direction: what to dial up or down  *(Define)*
 
-Run by `define-levers` where `house-rules.md` names it.
+Run by `define-levers` where the house rules name it.
 
 **Include when:** themes are named but there is no direction on what to dial up or down.
 **Skip when:** D1 was skipped, unless the user names themes directly.
 
 ### D3. Structural wireframes  *(Design)*
 
-Greyscale, shape only, no styling. Run by `discovery` where `house-rules.md` names it.
+Greyscale, shape only, no styling. Run by `discovery` where the house rules name it.
 
 **Include when:** any new screen or layout is needed.
 **Skip when:** the reuse audit found an existing layout or template this is an instance of. Note
@@ -136,7 +136,7 @@ which one it is an instance of instead.
 
 ### D4. Interaction states  *(Design)*
 
-Run by `interaction` where `house-rules.md` names it.
+Run by `interaction` where the house rules name it.
 
 **Include when:** there is any state beyond static display. Loading, empty, error, selected,
 filtered, hovered.
@@ -146,7 +146,7 @@ skipping, because the failure modes listed there are states.
 
 ### D5. Visual styling  *(Design)*
 
-Run by `ui` where `house-rules.md` names it.
+Run by `ui` where the house rules name it.
 
 **Include when:** anyone other than the builder will see it, or the builder will look at it often
 enough for it to matter.
@@ -156,7 +156,7 @@ enough for it to matter.
 ### D6. Review  *(Design)*
 
 **Include:** an interaction review after D4, a visual review after D5, and a copy review when the
-thing carries meaningful copy such as labels, errors or empty states. Where `house-rules.md` names
+thing carries meaningful copy such as labels, errors or empty states. Where the house rules name
 review skills, route to them. Where it does not, say what is being reviewed against.
 **Skip when:** the piece is small enough that the review costs more than the defects.
 
@@ -207,7 +207,7 @@ one built deliberately is a feature.
 
 **Include when:** it is needed somewhere other than this machine.
 **Placed:** phase 2. Principle 4.
-**Check `house-rules.md` first.** Some paths must never leave the machine, and a route that would
+**Check the house rules first.** Some paths must never leave the machine, and a route that would
 deploy one is wrong regardless of what the project wants.
 
 ---

@@ -33,15 +33,23 @@ does not open Paper.
 
 ## Before starting
 
-Read `references/sections.md`, `references/stages.md` and the house rules in full. For the house
-rules, prefer `~/.claude/house.md` when it exists and treat `references/house-rules.md` as the
-documented fallback and template. Do
+Read `references/sections.md` and `references/stages.md` in full, and resolve the house rules. Do
 not work from memory. The acceptance tests in the sections file are the whole value of the skill and
 they are not guessable.
 
-`house-rules.md` is the only file tied to a particular workspace: where shared components live,
-which design skills exist, writing style, and any constraint that overrides a route. Where it is
-absent or a section of it is empty, use the defaults it names and say which default you used.
+**The house rules** are the only part of this skill tied to a particular person or workspace. This
+skill reads four sections: `## Writing`, `## Reuse`, `## Stages` and `## Constraints`.
+
+**Lookup, per section:** a project `.house-rules.md` (searched upward from the project folder), then
+the user file `~/.config/house-rules/house-rules.md`, then the legacy `~/.claude/house.md`, then
+`references/house-rules.md`, the bundled fallback and template. The first file with a non-empty
+section wins that section whole. Sections are never merged across files. A section may point to
+another file for the detail, in which case follow it.
+
+Where a section is absent or empty everywhere, use the default `references/house-rules.md` names
+for it and say which default you used. When you hand back the brief, add one line saying what was
+used, for example: "Applied: Constraints from project `.house-rules.md`, Writing by default." If
+only the bundled fallback was used, add: "`house-rules-setup` can create your own."
 
 If the user has handed over an existing brief, notes or a chat transcript, read it first and
 pre-fill every section you can from it. Then interview only for what is missing or vague. Never ask
@@ -87,7 +95,7 @@ Three that carry the most weight:
 
 Sections 13 to 16. The user does not answer these. You work them out and show them the result.
 
-- **Section 13, reuse audit.** Do the search. Look where `house-rules.md` says to look, plus any
+- **Section 13, reuse audit.** Do the search. Look where the house rules say to look, plus any
   project named in the answers. Report components, utilities and patterns that already do part of
   this job, with paths. "Nothing found" is a valid result only after actually looking, and say
   where you looked.
@@ -164,7 +172,7 @@ Write `brief.md` in the project folder, using the section order in `references/s
   and why is the one that survives someone asking "why didn't we just...".
 - Mark anything unresolved as an open question with what resolves it. Do not smooth over a gap with
   a plausible sentence.
-- Follow the writing style in `house-rules.md`.
+- Follow the writing style in the house rules.
 - Use plain stage names, never the internal codes from `stages.md`.
 - Keep it as short as the project allows. The sections are required, the length is not.
 
@@ -178,7 +186,7 @@ the plan the same way.
 ## What this skill does not do
 
 - It does not design. When the route reaches a design stage, the next step is that stage, run by
-  whoever or whatever `house-rules.md` names for it.
+  whoever or whatever the house rules name for it.
 - It does not estimate in days. Section 12 is an effort ceiling, meaning the point past which the
   project is not worth it, which is a different question.
 - It does not write a brief for a project that cannot state success. It says so instead.

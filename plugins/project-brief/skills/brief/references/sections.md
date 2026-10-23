@@ -197,7 +197,7 @@ The user answers none of these. Work them out, show them back, then write the fi
 
 ### 13. Reuse audit
 
-Search before writing. Look where `house-rules.md` says shared things live, plus any project named
+Search before writing. Look where the house rules say shared things live, plus any project named
 in the answers. Report what already does part of this job, with paths.
 
 "Nothing found" is valid only after looking. State where you looked.

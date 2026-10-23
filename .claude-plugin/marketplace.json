@@ -66,6 +66,20 @@
         "scoping",
         "design-process"
       ]
+    },
+    {
+      "name": "house-rules-setup",
+      "source": "./plugins/house-rules-setup",
+      "description": "Creates the house rules that personalise the other design skills: your evidenced preferences, shared component locations and constraints, at user or project level.",
+      "version": "0.1.0",
+      "displayName": "House Rules Setup",
+      "category": "Process",
+      "tags": [
+        "personalisation",
+        "preferences",
+        "house-rules",
+        "design-process"
+      ]
     }
   ]
 }

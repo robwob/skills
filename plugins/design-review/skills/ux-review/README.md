@@ -45,6 +45,11 @@ violation is a defect. **Evidence** is a quantified finding from a primary sourc
 widely adopted practice where sources disagree. Folklore is excluded, and the library keeps an
 `Excluded, and why` section so rejected rules do not creep back in.
 
+**House rules.** An optional plain markdown file that adapts the skill to you without editing it. A
+project `.house-rules.md` takes precedence over your personal `~/.config/house-rules/house-rules.md`. This skill reads
+the `## Interaction` and `## Reuse` sections, and applies Interaction to your own work only. The
+`house-rules-setup` skill creates the file by interview.
+
 The library is a first pass and is expected to change. When the skill sees a problem no entry covers,
 it proposes an addition and waits: nothing is written without your approval.
 
