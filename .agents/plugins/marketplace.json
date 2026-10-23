@@ -1,0 +1,73 @@
+{
+  "name": "design",
+  "interface": {
+    "displayName": "Design"
+  },
+  "plugins": [
+    {
+      "name": "design-review",
+      "version": "1.0.0",
+      "source": {
+        "source": "local",
+        "path": "./plugins/design-review"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Design"
+    },
+    {
+      "name": "design-strategy",
+      "version": "1.0.0",
+      "source": {
+        "source": "local",
+        "path": "./plugins/design-strategy"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Design"
+    },
+    {
+      "name": "house-rules-setup",
+      "version": "0.1.0",
+      "source": {
+        "source": "local",
+        "path": "./plugins/house-rules-setup"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Process"
+    },
+    {
+      "name": "project-brief",
+      "version": "1.0.0",
+      "source": {
+        "source": "local",
+        "path": "./plugins/project-brief"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Process"
+    },
+    {
+      "name": "ux-research",
+      "version": "1.1.0",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ux-research"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    }
+  ]
+}

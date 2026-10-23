@@ -325,8 +325,8 @@ not recall one from memory: skills get added, and the field is how this skill fi
   moderated or unmoderated, which the specialist confirms rather than takes as final
 - The house rules, which still apply
 
-How to invoke: in Claude Code, call the skill by its name. On claude.ai, read that skill's
-`SKILL.md` and follow it, passing the context as its input.
+How to invoke: in Claude Code, call the skill by its name. In Codex, type `$` and the skill name.
+On claude.ai, read that skill's `SKILL.md` and follow it, passing the context as its input.
 
 ---
 
@@ -337,8 +337,7 @@ both from the same approved plan, so the two cannot disagree.
 
 ### The Word brief
 
-Use the docx skill (in Claude Code, invoke `anthropic-skills:docx`; on claude.ai, read
-`/mnt/skills/public/docx/SKILL.md`) before writing any document code.
+Use the docx skill (in Claude Code, invoke `anthropic-skills:docx`; on claude.ai, read `/mnt/skills/public/docx/SKILL.md`; in Codex or elsewhere, use a docx skill if one is installed, otherwise build the file with a library such as python-docx and say which you used) before writing any document code.
 
 **Filename:** `UX Research Brief - [Project Name].docx`
 

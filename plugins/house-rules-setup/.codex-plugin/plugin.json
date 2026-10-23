@@ -1,0 +1,18 @@
+{
+  "name": "house-rules-setup",
+  "version": "0.1.0",
+  "description": "Creates the house rules that personalise the design skills: your visual preferences, writing style, shared component locations, stage routing and constraints, at user or project level.",
+  "author": {
+    "name": "Robwob"
+  },
+  "homepage": "https://github.com/robwob/skills",
+  "repository": "https://github.com/robwob/skills",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "personalisation",
+    "preferences",
+    "house-rules"
+  ],
+  "skills": "./skills/"
+}

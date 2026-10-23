@@ -118,6 +118,26 @@ silently**: the skill simply does not appear, with no error anywhere. Confirm it
 [ -e ~/.claude/skills/ui-review/SKILL.md ] && echo OK || echo BROKEN
 ```
 
+### Codex
+
+The same repo installs in Codex. The skills are shared: each plugin carries a `.claude-plugin/` and a
+`.codex-plugin/` manifest pointing at one `skills/` folder, and a second catalogue at
+`.agents/plugins/marketplace.json` lists the plugins for Codex.
+
+```
+codex plugin marketplace add robwob/skills
+codex plugin add design-review@design
+```
+
+Restart Codex afterwards, then use `/skills` or type `$ui-review`. Codex keeps one enabled-plugin
+state per `CODEX_HOME`, with no per-project scopes. **This route follows the Codex docs and has not
+been tested on a machine with Codex installed.** If you try it, an issue saying what happened is the
+most useful thing you can send. Without plugins, symlink a skill folder into `~/.agents/skills/`.
+
+Skills that read house rules look at `~/.config/house-rules/house-rules.md`, which works in both
+tools. A few passages mention Claude-only tools, such as the docx skill, with a fallback for
+elsewhere.
+
 Each skill's own README covers its use and what it produces in more detail.
 
 ## A note on what is not here

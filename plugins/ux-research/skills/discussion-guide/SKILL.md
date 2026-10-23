@@ -206,8 +206,7 @@ a starting point, and recommend piloting the guide to check them.
 
 ## Output
 
-Produce the guide as a Word document. Use the docx skill (in Claude Code, invoke
-`anthropic-skills:docx`; on claude.ai, read `/mnt/skills/public/docx/SKILL.md`) before writing any
+Produce the guide as a Word document. Use the docx skill (in Claude Code, invoke `anthropic-skills:docx`; on claude.ai, read `/mnt/skills/public/docx/SKILL.md`; in Codex or elsewhere, use a docx skill if one is installed, otherwise build the file with a library such as python-docx and say which you used) before writing any
 document code.
 
 **Filename:** `Discussion Guide - [Project Name].docx`
