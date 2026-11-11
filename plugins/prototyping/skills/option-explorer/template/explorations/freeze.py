@@ -4,12 +4,15 @@
     python3 explorations/freeze.py --screen home --option B --title "B2: shorter list"
     python3 explorations/freeze.py --check
 
-Copies the prototype into explorations/<screen>/NN-<slug>.html and appends an
-entry to records.js. The previous latest entry for the same screen and option
+Bundles the prototype (its HTML plus every stylesheet, the shell and each
+screen file it loads) into one self-contained file at
+explorations/<screen>/NN-<slug>.html, and appends an entry to records.js.
+Bundling is what keeps a frozen copy frozen: it does not depend on the screen
+files, which keep changing. The previous latest entry for the same screen and option
 is marked "replaced" (unless it was already rejected or replaced). why, aim and
 outcome start as TODO and are written afterwards from the conversation.
 
---check reports whether the prototype differs from the newest frozen copy,
+--check reports whether the bundled prototype differs from the newest frozen copy,
 i.e. whether there is an iteration nobody has recorded yet. Exit 0 if up to
 date, 1 if not.
 
@@ -22,7 +25,6 @@ import hashlib
 import json
 import os
 import re
-import shutil
 import sys
 from datetime import date
 
@@ -63,9 +65,47 @@ def find_prototype(given):
     return found[0]
 
 
-def sha(path):
-    with open(path, "rb") as fh:
-        return hashlib.sha256(fh.read()).hexdigest()
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def read(base, rel):
+    path = os.path.join(base, rel)
+    if not os.path.isfile(path):
+        sys.exit(f"Missing file: {rel} (referenced by the prototype)")
+    return open(path, encoding="utf-8").read()
+
+
+def bundle(proto):
+    """The prototype as one self-contained HTML document, as bytes."""
+    base = os.path.dirname(proto)
+    html = open(proto, encoding="utf-8").read()
+    local = lambda ref: not re.match(r"^[a-z]+:|^//", ref)
+    js = lambda code: code.replace("</script", "<\\/script")
+
+    def style(m):
+        href = m.group(1)
+        if not local(href):
+            return m.group(0)
+        return f"<style>/* {href} */\n{read(base, href)}</style>"
+    html = re.sub(r'<link\s+rel="stylesheet"\s+href="([^"]+)"\s*/?>', style, html)
+
+    files = re.search(r"SCREEN_FILES\s*=\s*\[(.*?)\]", html, re.S)
+    names = re.findall(r"['\"]([^'\"]+)['\"]", files.group(1)) if files else []
+
+    def script(m):
+        src = m.group(1)
+        if not local(src):
+            return m.group(0)
+        code = f"<script>/* {src} */\n{js(read(base, src))}</script>"
+        if os.path.basename(src) != "shell.js":
+            return code
+        screens = "".join(
+            f"<script>/* prototype/screens/{n}.js */\n{js(read(base, f'prototype/screens/{n}.js'))}</script>\n"
+            for n in names)
+        return "<script>window.OE_BUNDLED = true;</script>\n" + code + "\n" + screens + "<script>OE.start();</script>"
+    html = re.sub(r'<script\s+src="([^"]+)"\s*>\s*</script>', script, html)
+    return html.encode("utf-8")
 
 
 def slug(text):
@@ -93,7 +133,7 @@ def main():
             print("Nothing frozen yet: freeze the current state first.")
             sys.exit(1)
         newest = os.path.join(HERE, records[-1]["file"])
-        if os.path.isfile(newest) and sha(newest) == sha(proto):
+        if os.path.isfile(newest) and sha(open(newest, "rb").read()) == sha(bundle(proto)):
             print("Up to date: the prototype matches the newest frozen copy.")
             sys.exit(0)
         print(f"Unrecorded changes: the prototype differs from the newest frozen copy ({records[-1]['id']}).")
@@ -106,7 +146,8 @@ def main():
     os.makedirs(folder, exist_ok=True)
     n = len([f for f in os.listdir(folder) if f.endswith(".html")]) + 1
     rel = f"{a.screen}/{n:02d}-{slug(a.title)}.html"
-    shutil.copyfile(proto, os.path.join(HERE, rel))
+    with open(os.path.join(HERE, rel), "wb") as fh:
+        fh.write(bundle(proto))
 
     data["prototype"] = os.path.basename(proto)
     screens = data.setdefault("screens", {})
