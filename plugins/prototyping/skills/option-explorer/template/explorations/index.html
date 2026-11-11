@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Explorations</title>
+<style>
+/* Explorations viewer. Every iteration of every option, frozen as it was,
+   with why it was made, what it aimed for and what happened to it. The
+   entries live in records.js; freeze.py writes them. Never edit a frozen
+   copy. */
+:root{
+  --bg:#0D0D11; --panel:#16161C; --panel-2:#1E1E26;
+  --line:rgba(255,255,255,.09); --line-strong:rgba(255,255,255,.18);
+  --ink:#F2F2F6; --ink-2:#B4B4C2; --ink-3:#7C7C8C;
+  --chosen:#4CC38A; --rejected:#E5675C; --replaced:#8A8A99; --exploring:#D4A017;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;padding:0;height:100%}
+body{background:var(--bg);color:var(--ink);font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+.app{display:flex;height:100vh}
+.side{flex:0 0 360px;display:flex;flex-direction:column;background:var(--panel);border-right:1px solid var(--line);min-height:0}
+.head{padding:18px 20px 12px;border-bottom:1px solid var(--line)}
+.head h1{font-size:15px;font-weight:650;margin:0}
+.head p{font-size:11.5px;color:var(--ink-3);margin:4px 0 0;line-height:1.45}
+.head a{color:var(--ink-2);font-weight:600}
+.menu{flex:0 1 auto;overflow-y:auto;padding:10px 12px;max-height:46vh;border-bottom:1px solid var(--line)}
+.grp{margin:6px 0 12px}
+.grp h2{font-size:10px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--ink-3);margin:0 8px 6px}
+.grp .gsub{font-size:11px;color:var(--ink-3);margin:-4px 8px 6px}
+.item{appearance:none;width:100%;text-align:left;border:1px solid transparent;background:none;color:var(--ink-2);font:inherit;
+  padding:7px 8px;border-radius:8px;cursor:pointer;display:grid;grid-template-columns:10px 1fr auto;gap:2px 9px;align-items:center}
+.item:hover{background:var(--panel-2)}
+.item[aria-current="true"]{background:var(--panel-2);border-color:var(--line-strong);color:var(--ink)}
+.item .dot{width:9px;height:9px;border-radius:50%}
+.item .t{font-size:12.5px;font-weight:600;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.item .d{font-size:11px;color:var(--ink-3)}
+.s-chosen{background:var(--chosen)} .s-rejected{background:var(--rejected)} .s-replaced{background:var(--replaced)} .s-exploring{background:var(--exploring)}
+.rec{flex:1 1 auto;overflow-y:auto;padding:16px 20px 28px;min-height:0}
+.rec h3{font-size:16px;font-weight:650;margin:0 0 4px;line-height:1.3}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:14px;font-size:11.5px;color:var(--ink-3)}
+.pill{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:999px;color:#111}
+.flag{font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:999px;border:1px solid var(--line-strong);color:var(--ink-2)}
+.field{margin-bottom:14px}
+.field h4{font-size:10px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--ink-3);margin:0 0 4px}
+.field p{margin:0;font-size:13px;line-height:1.5;color:var(--ink-2)}
+.field p.todo{color:var(--exploring)}
+.field ul{margin:0;padding-left:18px;font-size:13px;line-height:1.5;color:var(--ink-2)}
+blockquote{margin:6px 0 0;padding:6px 10px;border-left:3px solid var(--exploring);background:var(--panel-2);border-radius:0 6px 6px 0;font-size:13px;color:var(--ink)}
+.open{font-size:12px;color:var(--ink-2)}
+.open a{color:var(--ink)}
+.empty{padding:20px;font-size:13px;color:var(--ink-3);line-height:1.5}
+.stage{flex:1;min-width:0;display:flex;flex-direction:column}
+.stage iframe{flex:1;border:0;width:100%;background:var(--bg)}
+.views{flex:0 0 auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--panel)}
+.views .lbl{font-size:10px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--ink-3);margin-right:4px}
+.vw{appearance:none;border:1px solid var(--line);background:var(--panel-2);color:var(--ink-2);font:inherit;font-size:12px;font-weight:600;
+  padding:6px 12px;border-radius:999px;cursor:pointer}
+.vw:hover{border-color:var(--line-strong);color:var(--ink)}
+.vw[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#111}
+@media (max-width:1000px){
+  .app{flex-direction:column;height:auto}
+  .side{flex:none;border-right:0;border-bottom:1px solid var(--line)}
+  .menu{max-height:none}
+  .stage{height:100vh}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="head">
+      <h1 id="title">Explorations</h1>
+      <p>Every iteration of every option, frozen as it was, with why it was made, what it
+      aimed for and what happened to it. The latest of each lives in the
+      <a href="../" id="proto">prototype</a>.</p>
+    </div>
+    <nav class="menu" id="menu" aria-label="Iterations"></nav>
+    <section class="rec" id="rec" aria-live="polite"></section>
+  </aside>
+  <main class="stage"><div class="views" id="views" hidden></div><iframe id="frame" title="Frozen iteration"></iframe></main>
+</div>
+
+<script src="records.js"></script>
+<script>
+/* Record fields: id, screen, option, title, date, status (exploring, chosen,
+   rejected, replaced), file, why, aim, outcome, quotes[], open[], views[[label,
+   query]], rebuilt. freeze.py fills id, screen, option, title, date, status and
+   file; the rest is written from the conversation that produced the change. */
+const DATA = window.EXPLORATIONS || {project:'Explorations', prototype:'', screens:{}, records:[]};
+const RECORDS = DATA.records;
+const STATUS = {chosen:'Chosen', rejected:'Rejected', replaced:'Replaced', exploring:'Being explored'};
+const $ = s => document.querySelector(s);
+const esc = t => String(t == null ? '' : t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const todo = t => !t || /^TODO/.test(t);
+
+$('#title').textContent = DATA.project + ': explorations';
+document.title = DATA.project + ': explorations';
+if (DATA.prototype) $('#proto').href = '../' + DATA.prototype;
+
+const order = Object.keys(DATA.screens);
+RECORDS.forEach(r => { if (!order.includes(r.screen)) order.push(r.screen); });
+
+function menu(sel){
+  $('#menu').innerHTML = order.map(s => {
+    const items = RECORDS.filter(r => r.screen === s);
+    if (!items.length) return '';
+    const S = DATA.screens[s] || {name:s};
+    return `<div class="grp"><h2>${esc(S.name)}</h2>${S.sub ? `<div class="gsub">${esc(S.sub)}</div>` : ''}` +
+      items.map(r => `<button class="item" data-id="${esc(r.id)}" aria-current="${r.id === sel}"><span class="dot s-${esc(r.status)}" title="${STATUS[r.status]||r.status}"></span><span class="t">${esc(r.title)}</span><span class="d">${esc(String(r.date).replace(/ \d{4}$/,''))}</span></button>`).join('') + `</div>`;
+  }).join('');
+}
+function field(h, v){ return `<div class="field"><h4>${h}</h4><p class="${todo(v)?'todo':''}">${todo(v) ? 'Not written yet' : esc(v)}</p></div>`; }
+function show(id){
+  if (!RECORDS.length){
+    $('#menu').innerHTML = '';
+    $('#rec').innerHTML = '<div class="empty">Nothing frozen yet. Every iteration of the prototype is saved here automatically as it is made.</div>';
+    return;
+  }
+  const r = RECORDS.find(x => x.id === id) || RECORDS[RECORDS.length - 1];
+  menu(r.id);
+  const S = DATA.screens[r.screen] || {name:r.screen};
+  const views = r.views || [];
+  $('#rec').innerHTML = `
+    <h3>${esc(r.title)}</h3>
+    <div class="meta"><span class="pill s-${esc(r.status)}">${STATUS[r.status]||esc(r.status)}</span><span>${esc(S.name)} · option ${esc(r.option)} · ${esc(r.date)}</span>
+      ${r.rebuilt ? '<span class="flag" title="Not saved at the time; rebuilt afterwards">Rebuilt</span>' : ''}</div>
+    ${field('Why it was made', r.why)}
+    ${field('What it was meant to achieve', r.aim)}
+    <div class="field"><h4>${r.status === 'chosen' ? 'Outcome' : r.status === 'exploring' ? 'Status' : 'Why it was not kept'}</h4>
+      <p class="${todo(r.outcome)?'todo':''}">${todo(r.outcome) ? 'Not written yet' : esc(r.outcome)}</p>
+      ${(r.quotes||[]).map(q => `<blockquote>"${esc(q)}"</blockquote>`).join('')}</div>
+    ${(r.open||[]).length ? `<div class="field"><h4>Carried over as open</h4><ul>${r.open.map(o => `<li>${esc(o)}</li>`).join('')}</ul></div>` : ''}
+    <p class="open">Open on its own: <a href="${esc(src(r, ''))}" target="_blank">${esc(r.file)}</a></p>`;
+  $('#views').hidden = !views.length;
+  $('#views').innerHTML = '<span class="lbl">View</span>' + views.map(([label, q], i) =>
+    `<button class="vw" data-q="${esc(q)}" aria-pressed="${i === 0}">${esc(label)}</button>`).join('');
+  $('#frame').src = src(r, views.length ? views[0][1] : '');
+  if (location.hash !== '#' + r.id) history.replaceState(null, '', '#' + r.id);
+}
+// A frozen copy opens on its own screen and option; extra view params are added after.
+function src(r, extra){
+  const p = new URLSearchParams({screen:r.screen, option:r.option});
+  new URLSearchParams(String(extra||'').replace(/^\?/,'')).forEach((v,k) => p.set(k,v));
+  return r.file + '?' + p.toString();
+}
+$('#views').addEventListener('click', e => {
+  const b = e.target.closest('.vw'); if (!b) return;
+  const r = RECORDS.find(x => x.id === location.hash.slice(1)); if (!r) return;
+  document.querySelectorAll('#views .vw').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+  $('#frame').src = src(r, b.dataset.q);
+});
+$('#menu').addEventListener('click', e => { const b = e.target.closest('.item'); if (b) show(b.dataset.id); });
+window.addEventListener('hashchange', () => show(location.hash.slice(1)));
+show(location.hash.slice(1));
+</script>
+</body>
+</html>

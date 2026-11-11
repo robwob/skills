@@ -1,0 +1,17 @@
+{
+  "name": "prototyping",
+  "description": "Compare layout options across several screens in one HTML prototype, with every iteration frozen into a browsable record of why it was made and what happened to it.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Robwob"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/robwob/skills",
+  "keywords": [
+    "design",
+    "prototyping",
+    "wireframes",
+    "options",
+    "design-history"
+  ]
+}

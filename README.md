@@ -83,14 +83,15 @@ the skill's own default. The format is in
 
 `ux-research-brief` can orchestrate `discussion-guide`, `usability-test-plan`, `survey-questions` and `desk-research`, or you can run any of them on its own. `card-sort-analysis` is for after a card sort has produced results.
 
-## Templates
+## Prototyping
 
-Plain HTML files to copy into a project. Not skills and not part of any plugin, so there is nothing
-to install.
-
-| Template | What it does |
+| Skill | What it does |
 |---|---|
-| [`option-explorer`](templates/option-explorer/) | A review shell for comparing structural options on one screen: a rail with the options, measured readouts and view toggles, beside the screen in a phone or browser frame. One file, no dependencies. |
+| [`option-explorer`](plugins/prototyping/skills/option-explorer/) | Compares layout options across several screens in one HTML prototype, and freezes every iteration into a browsable record of why it was made, what it aimed for and what happened to it, so nothing has to be saved by hand. |
+
+The template it builds from ships inside the skill, in `template/`, and works on its own as plain
+HTML. The plugin also installs a hook that snapshots a prototype just before it is edited, as a
+safety net for anything changed outside the routine.
 
 ## Install
 
@@ -103,6 +104,7 @@ claude plugin install design-strategy@design
 claude plugin install project-brief@design
 claude plugin install house-rules-setup@design
 claude plugin install ux-research@design
+claude plugin install prototyping@design
 ```
 
 Skills appear namespaced to their plugin, as `design-review:ui-review` and so on, and you can also
