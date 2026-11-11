@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Option explorer (template)</title>
+<style>
+/* Option explorer template
+   ------------------------------------------------------------------
+   Lifted from Account space's prototype. Two systems, kept apart:
+   THE DESIGN sits inside .device and is greyscale. THE INSTRUMENT is
+   the rail and stage header around it, dark, and allowed colour.
+   Replace the placeholder screen and the OPTIONS table; leave the
+   shell alone. Below 1000px the rail becomes a drawer and the device
+   becomes the whole screen. */
+:root{
+  --paper:#FFFFFF; --paper-2:#F7F7F7; --paper-3:#EFEFEF;
+  --ink:#1A1A1A; --ink-2:#5C5C5C; --ink-3:#8A8A8A;
+  --line:#E3E3E3; --fill:#D9D9D9;
+  --r-sm:8px; --r-md:12px; --r-full:9999px;
+  --sp2:8px; --sp3:12px; --sp4:16px; --sp5:20px; --sp6:24px; --sp8:32px;
+
+  --lab-bg:#0D0D11; --lab-panel:#16161C; --lab-panel-2:#1E1E26;
+  --lab-line:rgba(255,255,255,.09); --lab-line-strong:rgba(255,255,255,.18);
+  --lab-ink:#F2F2F6; --lab-ink-2:#9A9AA8; --lab-ink-3:#6C6C7C;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;padding:0}
+body{background:var(--lab-bg);color:var(--lab-ink);
+  font:400 14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased}
+
+/* ---- the lab ---- */
+.lab{display:flex;min-height:100vh;align-items:flex-start}
+.rail{position:sticky;top:0;flex:0 0 306px;height:100vh;overflow-y:auto;
+  background:var(--lab-panel);border-right:1px solid var(--lab-line);
+  padding:var(--sp5) var(--sp5) var(--sp8)}
+.railhead{display:flex;align-items:flex-start;gap:var(--sp3)}
+.rail h1{font-size:15px;font-weight:650;margin:0 0 2px;letter-spacing:-.01em}
+.rail .sub{font-size:11.5px;color:var(--lab-ink-3);margin:0 0 var(--sp5);line-height:1.45}
+.grp{margin-bottom:var(--sp6)}
+.grp>h2{font-size:10px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;
+  color:var(--lab-ink-3);margin:0 0 var(--sp3)}
+.grp .note{font-size:11px;color:var(--lab-ink-3);line-height:1.45;margin:var(--sp3) 0 0}
+.grp .note code{overflow-wrap:anywhere}
+
+.opts{display:flex;flex-direction:column;gap:6px}
+.opt{appearance:none;text-align:left;border:1px solid var(--lab-line);background:var(--lab-panel-2);
+  color:var(--lab-ink-2);font:inherit;padding:10px 12px;border-radius:var(--r-sm);cursor:pointer;
+  display:flex;flex-direction:column;gap:2px;transition:.13s ease}
+.opt:hover{border-color:var(--lab-line-strong)}
+.opt b{font-size:12.5px;font-weight:650;color:var(--lab-ink)}
+.opt span{font-size:11px;color:var(--lab-ink-3);line-height:1.35}
+.opt[aria-pressed="true"]{background:var(--lab-ink);border-color:var(--lab-ink)}
+.opt[aria-pressed="true"] b{color:#111}
+.opt[aria-pressed="true"] span{color:#3a3a44}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{appearance:none;border:1px solid var(--lab-line);background:var(--lab-panel-2);
+  color:var(--lab-ink-2);font:inherit;font-size:11.5px;font-weight:550;
+  padding:6px 11px;border-radius:var(--r-full);cursor:pointer;transition:.13s ease}
+.chip:hover{border-color:var(--lab-line-strong);color:var(--lab-ink)}
+.chip[aria-pressed="true"]{background:var(--lab-ink);border-color:var(--lab-ink);color:#111}
+
+.readout{display:flex;flex-direction:column;gap:8px}
+.rrow{display:grid;grid-template-columns:1fr auto;gap:2px 8px;padding:9px 10px;
+  border:1px solid var(--lab-line);border-radius:var(--r-sm);background:var(--lab-panel-2)}
+.rrow .rl{font-size:12px;font-weight:650;color:var(--lab-ink)}
+.rrow .rv{font-size:12px;font-weight:700;color:var(--lab-ink);font-variant-numeric:tabular-nums}
+.rrow .rs{grid-column:1/-1;font-size:10.5px;color:var(--lab-ink-3);line-height:1.35}
+
+.railclose,.railtoggle{display:none}
+.railclose{flex:0 0 auto;appearance:none;border:1px solid var(--lab-line);background:var(--lab-panel-2);
+  color:var(--lab-ink-2);width:30px;height:30px;border-radius:50%;font:600 14px/1 inherit;cursor:pointer}
+.railtoggle{position:fixed;z-index:30;right:14px;bottom:14px;appearance:none;
+  border:1px solid var(--lab-line-strong);background:var(--lab-panel);color:var(--lab-ink);
+  font:650 12.5px/1 inherit;padding:11px 17px;border-radius:var(--r-full);cursor:pointer;
+  box-shadow:0 8px 26px rgba(0,0,0,.5)}
+
+/* ---- stage and device ---- */
+.stage{flex:1;display:flex;flex-direction:column;align-items:center;
+  padding:var(--sp8) var(--sp6) 64px;gap:var(--sp5);min-width:0}
+.stagehead{text-align:center;max-width:560px}
+.stagehead h2{margin:0 0 6px;font-size:14px;font-weight:600}
+.stagehead p{margin:0;font-size:12px;color:var(--lab-ink-3);line-height:1.55}
+.device{width:393px;height:852px;flex:0 0 auto;position:relative;background:var(--paper);
+  border-radius:44px;border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 0 0 9px #1c1c1c,0 30px 70px rgba(0,0,0,.6);overflow:hidden;color:var(--ink)}
+.screen{position:absolute;inset:0;display:flex;flex-direction:column;background:var(--paper)}
+.body{flex:1;overflow-y:auto;padding:var(--sp4)}
+
+/* ---- desktop view: a browser frame, wider. Above 1000px only. ----
+   A mobile screen is never stretched to desktop width: that is what puts
+   sheets over maps and floating buttons over content. An option with a
+   renderDesktop() fills the frame with its own desktop layout. An option
+   without one (.device.mobile-only) keeps its screen at phone width,
+   centred in the frame, so it looks exactly as it does on mobile. */
+.chrome{display:none}
+@media (min-width:1001px){
+  body.desktop .device{width:min(1180px,100%);height:780px;border-radius:14px;
+    border:1px solid #CBCBCB;box-shadow:0 20px 60px rgba(0,0,0,.55);display:flex;flex-direction:column}
+  body.desktop .chrome{flex:0 0 auto;display:flex;align-items:center;gap:var(--sp4);height:40px;
+    padding:0 var(--sp4);background:var(--paper-3);border-bottom:1px solid var(--line)}
+  .chrome .cdots{display:flex;gap:6px}
+  .chrome .cdots i{width:10px;height:10px;border-radius:50%;background:#C2C2C2}
+  .chrome .curl{flex:1;max-width:420px;height:24px;border-radius:var(--r-full);background:var(--paper);
+    border:1px solid var(--line);font-size:11.5px;color:var(--ink-3);display:flex;align-items:center;padding:0 var(--sp4)}
+  body.desktop .screen{position:relative;inset:auto;flex:1;min-height:0}
+  body.desktop .body{padding:var(--sp6) var(--sp8)}
+  /* no desktop design yet: the phone screen, at phone width, centred */
+  body.desktop .device.mobile-only{background:var(--paper-3)}
+  body.desktop .device.mobile-only .screen{flex:1 1 auto;width:393px;align-self:center;
+    border-left:1px solid var(--line);border-right:1px solid var(--line)}
+  body.desktop .device.mobile-only .body{padding:var(--sp4)}
+}
+.devnote{margin:0;font-size:11px;color:var(--lab-ink-3);text-align:center}
+
+/* ---- placeholder desktop layout: an example of what renderDesktop() returns ---- */
+.dsk{display:grid;grid-template-columns:200px minmax(0,1fr);gap:var(--sp6);align-items:start}
+.dsk-nav{display:flex;flex-direction:column;gap:var(--sp2)}
+.dsk-nav .ph{margin:0}
+.dsk-main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp4)}
+.dsk-main .ph{margin:0}
+.dsk-main .wide{grid-column:1/-1}
+
+/* ---- placeholder screen: delete when you have a real one ---- */
+.ph{border:1.5px dashed var(--fill);border-radius:var(--r-md);padding:var(--sp4);
+  margin-bottom:var(--sp3);color:var(--ink-3);font-size:12px;background:var(--paper-2)}
+.ph b{display:block;color:var(--ink);font-size:13px;margin-bottom:2px}
+
+/* ---- mobile: the lab collapses, the design does not change ---- */
+@media (max-width:1000px){
+  .railtoggle{display:block}
+  .railclose{display:grid;place-items:center}
+  .lab{display:block}
+  .rail{position:fixed;inset:0 auto 0 0;z-index:25;width:min(340px,86vw);height:100dvh;
+    transform:translateX(-102%);transition:transform .26s cubic-bezier(.22,.7,.28,1);
+    box-shadow:0 0 60px rgba(0,0,0,.6)}
+  body.railopen .rail{transform:translateX(0)}
+  body.railopen::after{content:"";position:fixed;inset:0;z-index:24;background:rgba(0,0,0,.5)}
+  .stage{padding:0;gap:0;height:100dvh}
+  .stagehead{display:flex;align-items:baseline;gap:10px;text-align:left;max-width:none;width:100%;
+    padding:10px 16px;border-bottom:1px solid var(--lab-line)}
+  .stagehead h2{font-size:12.5px}
+  .stagehead p{font-size:11px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .device{width:100%;height:auto;flex:1 1 auto;min-height:0;border-radius:0;border:0;box-shadow:none}
+}
+@media (prefers-reduced-motion:reduce){.rail,.opt,.chip{transition:none}}
+</style>
+</head>
+<body>
+
+<button class="railtoggle" id="railToggle" aria-expanded="false">Controls</button>
+
+<div class="lab">
+  <!-- THE RAIL: what this is about, the options, readouts, view toggles -->
+  <aside class="rail" id="rail">
+    <div class="railhead">
+      <div>
+        <h1>Question being explored</h1>
+        <p class="sub">One or two lines on what is being compared and what is held
+        constant, so the comparison is not about which looked better.</p>
+      </div>
+      <button class="railclose" id="railClose" aria-label="Close controls">✕</button>
+    </div>
+
+    <div class="grp">
+      <h2>Option</h2>
+      <div class="opts" id="cOpts"></div>
+    </div>
+
+    <div class="grp">
+      <h2>Device</h2>
+      <div class="chips" id="cDevice">
+        <button class="chip" data-device="mobile" aria-pressed="true">Mobile</button>
+        <button class="chip" data-device="desktop" aria-pressed="false">Desktop</button>
+      </div>
+      <p class="note">Desktop only applies above 1000px wide. An option with a
+      <code>renderDesktop()</code> fills the browser frame. One without keeps its phone
+      screen at phone width, so a mobile layout is never stretched.</p>
+    </div>
+
+    <div class="grp">
+      <h2>Readout</h2>
+      <div class="readout" id="readout"></div>
+      <p class="note">Measured values only. Anything asserted belongs in the notes, not here.</p>
+    </div>
+
+    <div class="grp">
+      <h2>View</h2>
+      <div class="chips">
+        <button class="chip" id="cAnnot" aria-pressed="false">Annotations</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- THE STAGE: the option's name and claim, then the device -->
+  <main class="stage">
+    <div class="stagehead">
+      <h2 id="optName"></h2>
+      <p id="optClaim"></p>
+    </div>
+    <div class="device">
+      <div class="chrome" aria-hidden="true">
+        <span class="cdots"><i></i><i></i><i></i></span>
+        <span class="curl">example.com</span>
+      </div>
+      <div class="screen">
+        <div class="body" id="body"></div>
+      </div>
+    </div>
+    <p class="devnote" id="devNote" hidden>No desktop layout for this option yet, so this is the mobile screen.</p>
+  </main>
+</div>
+
+<script>
+/* The only part to edit. One entry per option: what the rail says about it,
+   the function that draws its mobile screen, and optionally renderDesktop()
+   for its desktop layout. Leave renderDesktop out until there is a desktop
+   design: the mobile screen is then shown at phone width in Desktop mode. */
+const OPTIONS = {
+  A: { name:'Option A', claim:'What this option claims, in a sentence.',
+       readout:[{l:'Taps to goal', v:'2', s:'Counted from the screen, not estimated'}],
+       render:() => ph('Module one','Replace with the real screen') + ph('Module two','Keep to what a screen would show'),
+       renderDesktop:() => `<div class="dsk">
+         <nav class="dsk-nav">${ph('Navigation','Side nav on desktop')}</nav>
+         <div class="dsk-main">${ph('Module one','Spans the full width','wide')}${ph('Module two','Side by side')}${ph('Module three','on desktop')}</div>
+       </div>` },
+  B: { name:'Option B', claim:'The competing claim.',
+       readout:[{l:'Taps to goal', v:'3', s:'Counted from the screen, not estimated'}],
+       render:() => ph('Module one','Different structure, same content') },
+  C: { name:'Option C', claim:'A third answer.',
+       readout:[{l:'Taps to goal', v:'1', s:'Counted from the screen, not estimated'}],
+       render:() => ph('Module one','') }
+};
+function ph(t, s, cls=''){ return `<div class="ph ${cls}"><b>${t}</b>${s}</div>`; }
+
+const $ = sel => document.querySelector(sel);
+let current = (() => { try { return localStorage.getItem('opt') } catch(e){ return null } })() || 'A';
+if (!OPTIONS[current]) current = 'A';
+
+function draw(){
+  const o = OPTIONS[current];
+  $('#cOpts').innerHTML = Object.entries(OPTIONS).map(([k,v]) =>
+    `<button class="opt" data-k="${k}" aria-pressed="${k===current}"><b>${v.name}</b><span>${v.claim}</span></button>`).join('');
+  $('#optName').textContent = o.name;
+  $('#optClaim').textContent = o.claim;
+  $('#readout').innerHTML = o.readout.map(r =>
+    `<div class="rrow"><span class="rl">${r.l}</span><span class="rv">${r.v}</span><span class="rs">${r.s}</span></div>`).join('');
+  // Desktop mode only takes effect above 1000px, so check the media query too.
+  const desk = document.body.classList.contains('desktop') && matchMedia('(min-width:1001px)').matches;
+  const mobileOnly = desk && !o.renderDesktop;
+  $('.device').classList.toggle('mobile-only', mobileOnly);
+  $('#devNote').hidden = !mobileOnly;
+  $('#body').innerHTML = (desk && o.renderDesktop) ? o.renderDesktop() : o.render();
+}
+matchMedia('(min-width:1001px)').addEventListener('change', draw);
+$('#cOpts').addEventListener('click', e => {
+  const b = e.target.closest('.opt'); if (!b) return;
+  current = b.dataset.k;
+  try { localStorage.setItem('opt', current) } catch(err){}
+  draw();
+});
+function setDevice(d){
+  document.body.classList.toggle('desktop', d === 'desktop');
+  document.querySelectorAll('#cDevice .chip').forEach(c =>
+    c.setAttribute('aria-pressed', String(c.dataset.device === d)));
+  try { localStorage.setItem('device', d) } catch(err){}
+  draw();
+}
+$('#cDevice').addEventListener('click', e => {
+  const b = e.target.closest('.chip'); if (b) setDevice(b.dataset.device);
+});
+{ let d = new URLSearchParams(location.search).get('device');
+  if (!d) { try { d = localStorage.getItem('device') } catch(err){} }
+  if (d === 'desktop') setDevice('desktop'); }
+$('#cAnnot').addEventListener('click', e => {
+  const on = e.currentTarget.getAttribute('aria-pressed') !== 'true';
+  e.currentTarget.setAttribute('aria-pressed', on);
+  document.body.classList.toggle('annot', on);
+});
+const setRail = open => { document.body.classList.toggle('railopen', open);
+  $('#railToggle').setAttribute('aria-expanded', open) };
+$('#railToggle').addEventListener('click', () => setRail(true));
+$('#railClose').addEventListener('click', () => setRail(false));
+draw();
+</script>
+</body>
+</html>

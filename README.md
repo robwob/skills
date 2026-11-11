@@ -83,6 +83,15 @@ the skill's own default. The format is in
 
 `ux-research-brief` can orchestrate `discussion-guide`, `usability-test-plan`, `survey-questions` and `desk-research`, or you can run any of them on its own. `card-sort-analysis` is for after a card sort has produced results.
 
+## Templates
+
+Plain HTML files to copy into a project. Not skills and not part of any plugin, so there is nothing
+to install.
+
+| Template | What it does |
+|---|---|
+| [`option-explorer`](templates/option-explorer/) | A review shell for comparing structural options on one screen: a rail with the options, measured readouts and view toggles, beside the screen in a phone or browser frame. One file, no dependencies. |
+
 ## Install
 
 Add the marketplace once, then install the plugins you want:
