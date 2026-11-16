@@ -437,6 +437,8 @@ laid out in `usability-test-plan/references/task-design.md`. `(derived)`
 
 **Executed by:** `usability-test-plan`
 
+**Analysed by:** `usability-test-analysis`
+
 ### Remote Moderated Testing
 
     Attitudinal <-> Behavioral:    mixed                (derived)
@@ -458,6 +460,8 @@ session time. `(derived)`
 `(derived)`
 
 **Executed by:** `usability-test-plan`
+
+**Analysed by:** `usability-test-analysis`
 
 ### Unmoderated Testing
 
@@ -485,6 +489,8 @@ task wording that cannot be misread, since there is no moderator to recover from
 
 **Executed by:** `usability-test-plan`
 
+**Analysed by:** `usability-test-analysis`
+
 ### Card Sorting
 
     Attitudinal <-> Behavioral:    attitudinal          (NN/g, stated)
@@ -509,6 +515,8 @@ bar. It is attitudinal: this is where people say things belong, not where they l
 `(derived)`
 
 **Executed by:** none yet
+
+**Analysed by:** `card-sort-analysis`
 
 ### Tree Testing
 
@@ -681,6 +689,8 @@ measures, and ideally a prior baseline to compare against. The heaviest method h
 
 **Executed by:** `usability-test-plan`
 
+**Analysed by:** `usability-test-analysis` (counts and intervals; at benchmarking sample sizes its small-number rules relax, and it says so)
+
 ### Surveys
 
     Attitudinal <-> Behavioral:    attitudinal          (NN/g, stated)
@@ -764,3 +774,7 @@ needs landscape context)
 the four-activity table that previously lived inline in `SKILL.md`. Placements for six methods are
 source-stated; the rest are derived from method definitions because the chart is a raster image.
 All `Cannot tell you` fields are derived and tagged as such.
+
+**16 November 2026.** `Analysed by:` field added, naming the skill that analyses a method's results
+once the round has run. Set for the four usability methods (`usability-test-analysis`, new) and for
+card sorting (`card-sort-analysis`, which existed but was not linked). Every other method has none.

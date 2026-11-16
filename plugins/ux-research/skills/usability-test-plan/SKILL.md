@@ -244,6 +244,12 @@ One row per task per participant. **The stated rating and the observed record si
 
 A plan that collects SEQ or SUS without the paired behavioural record is incomplete.
 
+### After the sessions
+
+`usability-test-analysis` analyses the results against this plan's research questions and success
+criteria, and runs the stated against observed comparison this template is built for. Close the plan
+by telling the user to keep it and share it with that skill alongside the results.
+
 ---
 
 ## Tone and language

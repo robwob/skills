@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usability Test Summary: PROJECT</title>
+<!--
+Fill from the agreed markdown draft, section for section. Same content, same order.
+Self-contained: no external fonts, scripts or images. Replace every PLACEHOLDER and delete
+the example blocks you do not use. Mark interpretation with class="interp", inferred facts
+with <em class="inferred">(inferred)</em>.
+-->
+<style>
+  :root {
+    --text: #1d1d1f; --muted: #5f6368; --line: #e3e3e6; --bg: #ffffff; --panel: #f6f6f7;
+    --accent: #2f5d8a; --held: #2e6b46; --contra: #9a3b23; --none: #6b6b6b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --text: #ececee; --muted: #a3a3aa; --line: #34343a; --bg: #161618; --panel: #1f1f22;
+            --accent: #8fb4dc; --held: #7fc29a; --contra: #e59a83; --none: #a0a0a0; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 48px 16px 80px; }
+  h1 { font-size: 28px; line-height: 1.2; margin: 0 0 4px; }
+  h2 { font-size: 20px; margin: 48px 0 12px; padding-top: 16px; border-top: 1px solid var(--line); }
+  h3 { font-size: 17px; margin: 28px 0 8px; }
+  .meta, .muted { color: var(--muted); }
+  .meta { margin: 0 0 24px; }
+  .headline { font-size: 18px; background: var(--panel); padding: 16px 20px; border-radius: 8px; }
+  .finding { border-left: 3px solid var(--accent); padding: 4px 0 4px 16px; margin: 20px 0; }
+  .finding h3 { margin-top: 0; }
+  .tag { display: inline-block; font-size: 13px; padding: 1px 8px; border-radius: 10px;
+         background: var(--panel); color: var(--muted); margin-right: 6px; }
+  blockquote { margin: 8px 0; padding: 4px 0 4px 14px; border-left: 2px solid var(--line); }
+  blockquote cite { display: block; font-style: normal; color: var(--muted); font-size: 14px; }
+  .interp { background: var(--panel); padding: 10px 14px; border-radius: 6px; }
+  .interp::before { content: "Interpretation. "; font-weight: 600; }
+  .inferred { color: var(--muted); }
+  .table-wrap { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 600; }
+  .held { color: var(--held); } .contra { color: var(--contra); } .none { color: var(--none); }
+  .draft-note { font-size: 14px; color: var(--muted); }
+  @media print { h2 { break-after: avoid; } .finding, blockquote { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Usability Test Summary: PROJECT</h1>
+<p class="meta">DATE. N participants. METHOD IN ONE LINE.</p>
+
+<h2>1. Research overview</h2>
+<h3>Aim of the test</h3>
+<ul><li>RQ1: QUESTION</li></ul>
+<h3>Participants</h3>
+<ul><li>Total: N. SEGMENTS.</li><li>Profiles: BY PARTICIPANT ID.</li></ul>
+<h3>Methodology</h3>
+<ul><li>METHOD. <em class="inferred">(inferred)</em> where it applies.</li></ul>
+<h3>What this round can support</h3>
+<p>WHAT N PARTICIPANTS CAN AND CANNOT SHOW.</p>
+
+<h2>2. Summary and key findings</h2>
+<p class="headline">HEADLINE.</p>
+
+<h3>Answers to the research questions</h3>
+<ul><li><strong>RQ1:</strong> ANSWER. See finding 1.</li></ul>
+
+<div class="finding">
+  <h3>Finding 1: STATEMENT</h3>
+  <p><span class="tag">Seen in X of N</span><span class="tag">Severity 3</span></p>
+  <ul><li>EVIDENCE</li></ul>
+  <blockquote>"VERBATIM"<cite>P1</cite></blockquote>
+</div>
+
+<h3>What worked</h3>
+<ul><li>EVIDENCED POSITIVE</li></ul>
+
+<h2>3. Stated against observed</h2>
+<div class="table-wrap"><table>
+  <thead><tr><th>Task</th><th>Rating</th><th>Held</th><th>Contradicted</th><th>No paired evidence</th></tr></thead>
+  <tbody><tr><td>TASK</td><td>SEQ</td><td class="held">P1, P2</td><td class="contra">P6</td><td class="none">P3</td></tr></tbody>
+</table></div>
+<h3>Contradictions</h3>
+<ul><li>P6 rated TASK 7 of 7, then: <blockquote>"VERBATIM"<cite>P6</cite></blockquote></li></ul>
+<p class="interp">WHAT THE CONTRADICTIONS MEAN FOR THE SCORES.</p>
+
+<h2>4. Question by question</h2>
+<h3>Part A: Rating questions</h3>
+<h3>QN: QUESTION AS ASKED</h3>
+<ul>
+  <li>Answered: N. Distribution: 7: 3, 6: 2, 5: 1. Median: X.</li>
+  <li>Mean: X / 7, for comparison with BENCHMARK only.</li>
+  <li>Stated against observed: held X, contradicted X, no paired evidence X.</li>
+  <li>Observation: TEXT, with evidence.</li>
+</ul>
+
+<h3>Part B: Open questions</h3>
+<h3>QN: QUESTION AS ASKED</h3>
+<ul><li>THEME, X of N participants</li></ul>
+<blockquote>"VERBATIM"<cite>P2</cite></blockquote>
+<p>Against the pattern: NONE OR WHO.</p>
+<p class="interp">SENTIMENT AND TAKEAWAY.</p>
+
+<h2>5. Recommendations and next steps</h2>
+<div class="finding">
+  <h3>Recommendation 1: CHANGE</h3>
+  <p><span class="tag">From finding 1</span></p>
+  <p>Expected impact: TEXT.</p>
+</div>
+<h3>Next steps</h3>
+<ul><li>NEXT ROUND AND WHAT IT WILL SHOW.</li></ul>
+
+<h2>6. Limits of this round</h2>
+<ul><li>LIMIT</li></ul>
+
+<p class="draft-note">Participants are identified by ID only. Every quote was checked word for word against the results.</p>
+</main>
+</body>
+</html>

@@ -316,6 +316,12 @@ not recall one from memory: skills get added, and the field is how this skill fi
   section into the brief from the library entry, so the brief is never limited to what happens to
   be automatable.
 
+**After the round has run.** Some entries also carry an **`Analysed by:`** field, naming the skill
+that turns the method's results into findings. Mention it once, at handoff: "When the sessions are
+done, `[skill]` will analyse the results against these research questions." Read it from the field,
+like `Executed by:`, and say nothing where an entry has none. The brief and the specialist's plan are
+the context that skill needs, so tell the user to keep them.
+
 **Context to pass to a specialist:**
 - Research questions, with their confirmed placement
 - Assumptions
@@ -447,8 +453,8 @@ work around.
 Only after explicit approval.
 
 1. Edit `references/methods.md` in place, matching the surrounding format exactly: the four
-   placement lines, `What it is`, `Answers`, `Cannot tell you`, `Needs`, `Executed by`, each
-   claim tagged with its provenance.
+   placement lines, `What it is`, `Answers`, `Cannot tell you`, `Needs`, `Executed by`, and
+   `Analysed by` where a skill analyses its results, each claim tagged with its provenance.
 2. Add it under its phase, and update the method count wherever the file states one.
 3. Add a line to the file's change log.
 4. Confirm what changed and where.
