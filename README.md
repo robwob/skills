@@ -78,11 +78,12 @@ the skill's own default. The format is in
 | [`discussion-guide`](plugins/ux-research/skills/discussion-guide/) | Drafts an interview script. Pairs every attitude question with a follow-up that can contradict it. |
 | [`usability-test-plan`](plugins/ux-research/skills/usability-test-plan/) | Plans a moderated or unmoderated test, sizes the sample, and reports every stated rating next to the observed record. |
 | [`usability-test-analysis`](plugins/ux-research/skills/usability-test-analysis/) | Analyses usability test results from your tool's export. Checks every rating against what the same participant did or said, verifies every quote word for word, drafts the report, and pauses for you to shape the recommendations. |
+| [`interview-analysis`](plugins/ux-research/skills/interview-analysis/) | Analyses interview transcripts into an overview summary and a detailed report. Weighs each excerpt by how strong the evidence is, checks claims against specific occasions, verifies every quote at its timestamp, and grades every finding, opportunity and recommendation High, Medium or Low. Pauses for you to approve the opportunities and recommendations. |
 | [`survey-questions`](plugins/ux-research/skills/survey-questions/) | Drafts a survey, or audits an existing one for bias and for coverage against a brief. |
 | [`desk-research`](plugins/ux-research/skills/desk-research/) | Competitor and landscape research, weighted by what each source type can and cannot show. Returns hypotheses, not findings about users. |
 | [`card-sort-analysis`](plugins/ux-research/skills/card-sort-analysis/) | Analyses card sort results from your tool's export, from screenshots of its matrix and dendrogram, or from both, and reports what they support with the confidence in each finding stated. Comes with a guide to doing each analysis by hand. |
 
-`ux-research-brief` can orchestrate `discussion-guide`, `usability-test-plan`, `survey-questions` and `desk-research`, or you can run any of them on its own. `usability-test-analysis` and `card-sort-analysis` are for after the round has run: the brief names them at handoff, and `usability-test-analysis` answers the test plan's research questions when given the plan.
+`ux-research-brief` can orchestrate `discussion-guide`, `usability-test-plan`, `survey-questions` and `desk-research`, or you can run any of them on its own. `interview-analysis`, `usability-test-analysis` and `card-sort-analysis` are for after the round has run: the brief names them at handoff, and each answers the brief's or plan's research questions when given it.
 
 ## Prototyping
 

@@ -179,7 +179,8 @@ Draft the guide with these sections in order.
 
 ### 6. Reporting note
 One paragraph for whoever writes up the sessions: report each claim **and whether its pair
-supported it**, never the claim alone.
+supported it**, never the claim alone. `interview-analysis` does this when the transcripts are
+ready.
 
 ---
 

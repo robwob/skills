@@ -1,7 +1,7 @@
 {
   "name": "ux-research",
-  "version": "1.2.0",
-  "description": "Seven UX research skills: scope a brief, write a discussion guide, plan a usability test, analyse its results, draft or audit a survey, run desk research, and analyse card sort results. Each selects from a cited reference library rather than from memory.",
+  "version": "1.3.0",
+  "description": "Eight UX research skills: scope a brief, write a discussion guide and analyse the interviews, plan a usability test and analyse its results, draft or audit a survey, run desk research, and analyse card sort results. Each selects from a cited reference library rather than from memory.",
   "author": {
     "name": "Robwob"
   },
@@ -16,7 +16,8 @@
     "usability",
     "desk-research",
     "card-sorting",
-    "usability-testing"
+    "usability-testing",
+    "interviews"
   ],
   "skills": "./skills/"
 }

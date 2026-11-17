@@ -1,0 +1,19 @@
+participant,at,code,theme,evidence,stance
+P1,00:01:13,estimated bill nearly double,Estimated bills arrive as a surprise,occasion,for
+P2,00:01:11,estimated bill 300 pounds more,Estimated bills arrive as a surprise,occasion,for
+P4,00:01:01,estimated bill doubted by housemates,Estimated bills arrive as a surprise,occasion,for
+P5,00:02:06,estimate after moving in too high,Estimated bills arrive as a surprise,occasion,for
+P6,00:00:19,never had a surprise bill,Estimated bills arrive as a surprise,general,against
+P1,00:01:13,reminder came at work and forgot,Reading reminders arrive when people cannot act,occasion,for
+P1,00:04:01,swiped reminder away in meeting,Reading reminders arrive when people cannot act,occasion,for
+P3,00:03:11,own calendar because text arrives at random times,Reading reminders arrive when people cannot act,occasion,for
+P4,00:02:11,missed reminder on Saturday morning,Reading reminders arrive when people cannot act,occasion,for
+P2,00:03:41,reminders go to partner's email,Reading reminders arrive when people cannot act,general,for
+P5,00:00:17,sends readings every month without fail,Reading reminders arrive when people cannot act,general,against
+P1,00:02:16,photographed meter in case they argued,People photograph the meter as proof,occasion,for
+P2,00:02:41,photo with date because did not trust them,People photograph the meter as proof,occasion,for
+P5,00:01:03,photo every time; settled a dispute,People photograph the meter as proof,occasion,for
+P1,00:04:51,would use photo reading every month,Would use a photo reading feature,hypothetical,for
+P5,00:03:01,would use photo upload,Would use a photo reading feature,hypothetical,for
+P3,00:03:56,would like spike notification,Want usage notifications,hypothetical,for
+P6,00:02:41,maybe if important,Want usage notifications,hypothetical,for

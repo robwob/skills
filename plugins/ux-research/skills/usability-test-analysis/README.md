@@ -9,7 +9,7 @@ word against the data, reports counts rather than percentages, and drafts the re
 stops, so you can shape the recommendations, before producing a final HTML or Word file.
 
 Part of the research family, with `ux-research-brief`, `discussion-guide`, `usability-test-plan`,
-`survey-questions`, `desk-research` and `card-sort-analysis`. It analyses results, so it does not plan
+`interview-analysis`, `survey-questions`, `desk-research` and `card-sort-analysis`. It analyses results, so it does not plan
 or run the test. Given the plan from `usability-test-plan` it answers that plan's research questions.
 Each skill works on its own.
 

@@ -259,6 +259,8 @@ corroboration rule above. `(house)`
 
 **Executed by:** `discussion-guide`
 
+**Analysed by:** `interview-analysis`
+
 ### Field Studies
 
     Attitudinal <-> Behavioral:    mixed                (NN/g, stated)
@@ -778,3 +780,5 @@ All `Cannot tell you` fields are derived and tagged as such.
 **16 November 2026.** `Analysed by:` field added, naming the skill that analyses a method's results
 once the round has run. Set for the four usability methods (`usability-test-analysis`, new) and for
 card sorting (`card-sort-analysis`, which existed but was not linked). Every other method has none.
+
+**17 November 2026.** `Analysed by:` set for interviews (`interview-analysis`, new).
