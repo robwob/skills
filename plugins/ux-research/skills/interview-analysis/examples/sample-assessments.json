@@ -1,0 +1,36 @@
+{
+  "findings": [
+    {
+      "id": "F1",
+      "title": "Estimated bills arrive as a surprise and take days to put right",
+      "adequacy": {"concern": "none", "why": ""},
+      "coherence": {"concern": "minor", "why": "P6 has never had one, but is on a smart meter with a fixed payment, so the finding is scoped to manual readers."},
+      "evidence": {"concern": "none", "why": ""},
+      "relevance": {"concern": "none", "why": ""}
+    },
+    {
+      "id": "F2",
+      "title": "Reading reminders arrive when people cannot act on them",
+      "adequacy": {"concern": "minor", "why": "4 of 6 with a specific occasion; P2's is a general account."},
+      "coherence": {"concern": "minor", "why": "P5 says they never miss one, and described the last reading they sent."},
+      "evidence": {"concern": "none", "why": ""},
+      "relevance": {"concern": "minor", "why": "P3's occasion was while the smart meter was offline, a rarer context."}
+    },
+    {
+      "id": "F3",
+      "title": "People photograph the meter as proof before sending a reading",
+      "adequacy": {"concern": "minor", "why": "3 of 6, all with a specific occasion."},
+      "coherence": {"concern": "none", "why": ""},
+      "evidence": {"concern": "none", "why": ""},
+      "relevance": {"concern": "none", "why": ""}
+    }
+  ],
+  "opportunities": [
+    {"id": "O1", "title": "Help manual readers send a reading at a moment they can act on it, before an estimate is issued", "from": ["F1", "F2"]},
+    {"id": "O2", "title": "Help people show the reading they sent is correct without a separate email or call", "from": ["F3"]}
+  ],
+  "recommendations": [
+    {"id": "R1", "title": "Let people choose when the reading reminder arrives", "from": ["O1"]},
+    {"id": "R2", "title": "Accept a meter photo with the reading and keep it on the account", "from": ["O2"], "shown_in_behaviour": "P1, P2 and P5 already take the photo, and P5's settled a dispute in one email (00:01:03)."}
+  ]
+}
